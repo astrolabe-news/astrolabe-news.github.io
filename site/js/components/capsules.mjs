@@ -3,6 +3,7 @@
 // makes a one-sided story look one-sided at a glance.
 import { h } from '../render.mjs';
 import { logo } from './logo.mjs';
+import { BRAND } from '../brand.mjs';
 
 export const ORDER = ['far-left', 'left', 'lean-left', 'center', 'lean-right', 'right', 'far-right'];
 export const BIAS_LABEL = {
@@ -31,7 +32,7 @@ export function capsules(buckets, byDomain, { perColumn = 4 } = {}) {
 export function untracked(domains, byDomain) {
   if (!domains?.length) return null;
   return h('div', { class: 'untracked' },
-    h('h4', {}, 'Untracked bias'),
+    h('h4', {}, BRAND.unrated),
     h('div', { class: 'logo-row' }, domains.slice(0, 14).map((d) => logo(byDomain.get(d) ?? d, { size: 'sm' })))
   );
 }

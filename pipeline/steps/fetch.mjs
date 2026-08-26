@@ -2,7 +2,7 @@
 // rate-limit them, or let them 404 - so every failure is isolated and reported, never fatal.
 import { parseFeed, canonicalize } from '../lib/rss.mjs';
 
-const UA = 'Mozilla/5.0 (compatible; FulcrumNewsBot/0.1; +https://github.com/fulcrum-news)';
+const UA = 'Mozilla/5.0 (compatible; AstrolabeNewsBot/0.1; +https://github.com/astrolabe-news)';
 const TIMEOUT_MS = 15000;
 const CONCURRENCY = 24;
 

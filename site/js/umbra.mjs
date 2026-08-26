@@ -4,10 +4,11 @@ import { h, mount, frag } from './render.mjs';
 import * as store from './store.mjs';
 import { chrome, footer } from './components/chrome.mjs';
 import { cardBlind } from './components/card.mjs';
+import { BRAND } from './brand.mjs';
 
 const [idx, meta, byDomain] = await Promise.all([store.index(), store.meta(), store.sourceMap()]);
 store.applyTheme();
-mount('#chrome', chrome({ current: 'blindspot.html', topics: meta.topics.slice(0, 12) }));
+mount('#chrome', chrome({ current: 'umbra.html', topics: meta.topics.slice(0, 12) }));
 mount('#foot', footer(meta));
 
 const all = idx.filter((s) => s.b);
@@ -22,18 +23,18 @@ const topicsOf = (list) => {
 
 mount('#app',
   h('div', { class: 'blind-masthead' },
-    h('span', { class: 'blind-logo' }, 'BLINDSPOT'),
-    h('p', {}, 'Political stories that one side of the spectrum is barely reporting. ',
-      h('a', { href: 'about.html#blindspot', style: { textDecoration: 'underline' } }, 'How a Blindspot is worked out.'))
+    h('span', { class: 'blind-logo' }, BRAND.gap.wordmark),
+    h('p', {}, `${BRAND.gap.blurb} `,
+      h('a', { href: 'about.html#blindspot', style: { textDecoration: 'underline' } }, 'How this is worked out.'))
   ),
   h('div', { class: 'panel', style: { marginTop: '18px' } },
     h('div', { style: { display: 'flex', gap: '34px', flexWrap: 'wrap' } },
       h('div', {},
-        h('h3', {}, `${left.length} for the Left`),
+        h('h3', {}, `${left.length} missed by the Left`),
         h('div', { style: { fontSize: '13px', color: 'var(--ink-2)' } },
           topicsOf(left).map(([, n]) => n).join(' · ') || 'Nothing today')),
       h('div', {},
-        h('h3', {}, `${right.length} for the Right`),
+        h('h3', {}, `${right.length} missed by the Right`),
         h('div', { style: { fontSize: '13px', color: 'var(--ink-2)' } },
           topicsOf(right).map(([, n]) => n).join(' · ') || 'Nothing today'))
     ),
@@ -43,8 +44,8 @@ mount('#app',
       'A story lands here when one side is running it at less than half of that side\'s usual rate — not when it falls below a fixed percentage, which would just punish whichever side publishes less.')
   ),
   h('div', { class: 'blind-cols' },
-    column('For the Left', 'Stories that had little to no reporting on the Left.', left),
-    column('For the Right', 'Stories that had little to no reporting on the Right.', right)
+    column(BRAND.gap.left, BRAND.gap.leftSub, left),
+    column(BRAND.gap.right, BRAND.gap.rightSub, right)
   ),
   h('section', { class: 'sec' },
     h('div', { class: 'sec-head' }, h('h2', {}, 'Trending Topics')),
@@ -60,6 +61,6 @@ function column(title, sub, list) {
     list.length
       ? h('div', { class: 'blind-grid' }, list.map((s) => cardBlind(s, byDomain)))
       : h('p', { style: { fontSize: '14px', color: 'var(--ink-2)', paddingTop: '10px' } },
-          'No blindspots on this side right now. That is a real result rather than a gap — the feed only lists stories that clear the threshold.')
+          'Nothing on this side right now. That is a real result rather than a gap: the feed only lists stories that clear the threshold.')
   );
 }

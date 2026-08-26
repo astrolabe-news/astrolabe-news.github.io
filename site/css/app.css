@@ -32,7 +32,7 @@ h1,h2,h3,h4 { font-family: var(--font-display); font-weight: 700; letter-spacing
 
 /* ---------- promo strip ---------- */
 .promo {
-  background: var(--accent-soft); color: var(--accent-ink);
+  background: var(--accent); color: #F6F1E4;
   border-bottom: 1px solid var(--rule);
 }
 .promo .wrap {
@@ -40,9 +40,10 @@ h1,h2,h3,h4 { font-family: var(--font-display); font-weight: 700; letter-spacing
   height: 46px; font-size: 14px; font-weight: 500;
 }
 .promo .cta {
-  background: var(--ink); color: var(--paper); padding: 7px 14px;
+  background: var(--paper); color: var(--accent-ink); padding: 7px 14px;
   border-radius: 4px; font-size: 13px; font-weight: 600;
 }
+.promo a:not(.cta) { text-decoration: underline; }
 
 /* ---------- header ---------- */
 .masthead { background: var(--paper); border-bottom: 1px solid var(--rule); }

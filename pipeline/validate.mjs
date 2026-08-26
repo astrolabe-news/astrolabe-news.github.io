@@ -50,7 +50,7 @@ for (const t of tax.topics) {
   }
 }
 
-// A registry skewed to one side makes every story look like a blindspot for the other.
+// A registry skewed to one side makes every story look like a coverage gap for the other.
 // This is the single easiest way to get the whole product quietly wrong.
 const side = (b) => (b.includes('left') ? 'L' : b.includes('right') ? 'R' : 'C');
 const tally = { L: 0, C: 0, R: 0 };
@@ -58,7 +58,7 @@ for (const s of reg.sources) tally[side(s.bias)]++;
 const skew = Math.abs(tally.L - tally.R) / Math.max(tally.L, tally.R, 1);
 if (skew > 0.25) {
   errors.push(`spectrum is skewed: ${tally.L} left vs ${tally.R} right (${Math.round(skew * 100)}% apart). ` +
-    'Blindspot detection will systematically favour one side. Add outlets to the lighter side.');
+    'Coverage-gap detection will systematically favour one side. Add outlets to the lighter side.');
 }
 
 console.log(`${reg.sources.length} outlets, ${reg.sources.reduce((n, s) => n + s.feeds.length, 0)} feeds, ${tax.topics.length} topics`);

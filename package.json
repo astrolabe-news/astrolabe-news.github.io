@@ -1,9 +1,9 @@
 {
-  "name": "fulcrum",
+  "name": "astrolabe",
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "See who is covering a story, and who is not.",
+  "description": "Know who is covering a story, and who is not.",
   "scripts": {
     "ingest": "node pipeline/run.mjs",
     "ingest:fast": "node pipeline/run.mjs --limit 40 --no-llm",

@@ -1,10 +1,9 @@
-# Fulcrum
+# Astrolabe
 
-See who is covering a story, and who is not.
+Know who is covering a story, and who is not.
 
-Fulcrum groups news articles into stories and shows the political spread of the outlets
-covering each one, plus a feed of politically-charged stories that one side is barely
-reporting. It is free to use, has no accounts, and runs with no server and no hosting bill.
+Astrolabe groups news articles into stories and shows the political spread of the outlets
+covering each one, plus **Umbra**, a feed of politically-charged stories one side has left in shadow. It is free to use, has no accounts, and runs with no server and no hosting bill.
 
 ## How it costs nothing
 
@@ -101,6 +100,17 @@ feed on a balanced registry.
 
 ## Credit
 
-Fulcrum is an independent rebuild of an idea [Ground News](https://ground.news) developed
-and popularised. It is not affiliated with them. Headlines, images and links belong to the
-publishers who produced them, and every article links back to the original.
+Astrolabe is an independent implementation of an idea [Ground News](https://ground.news)
+developed and popularised: showing the political spread of coverage on every story, and
+surfacing what one side is ignoring.
+
+Astrolabe is **not affiliated with, endorsed by, or connected to Ground News**, and shares
+none of their code, branding, copy or data. The methodology here was derived from their
+publicly documented approach and then rebuilt independently; the naming, palette, wording
+and thresholds are its own.
+
+Headlines, images and links belong to the publishers who produced them, and every article
+links back to the original.
+
+Product naming lives in one file, `site/js/brand.mjs`. Change it there and it changes
+everywhere.

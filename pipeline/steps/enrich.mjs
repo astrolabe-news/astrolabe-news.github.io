@@ -148,7 +148,7 @@ function pickLead(articles, byDomain, clusterRare) {
     if (a.viaGoogle) n -= 2;                 // no dek, no image
     // Prefer a headline that states the news over one that frames it: commentary,
     // explainers and reaction pieces make poor story titles.
-    if (/\b(explains?|explainer|analysis|opinion|why |how |what to know|reacts?|tributes?|remembered|essential|live updates)\b/i.test(a.title)) n -= 4;
+    if (/\b(explains?|explainer|analysis|opinion|why |how |what to know|reacts?|tributes?|remember(ed|ing)|rip |looking back|legacy|in pictures|essential|live updates)\b/i.test(a.title)) n -= 4;
     if (a.title.includes('?')) n -= 2;
     // And prefer one carrying the vocabulary the whole press pack is using.
     if (clusterRare?.size) n += jaccard(rareTokens(a.title), clusterRare) * 12;

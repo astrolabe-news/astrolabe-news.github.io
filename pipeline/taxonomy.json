@@ -1,5 +1,5 @@
 {
-  "_note": "Topic rules are matched against a story's combined headlines. First match by weight wins; a story may carry up to three topics. Keep patterns specific - a bare 'trade' will swallow half the feed. The political flag marks topics that can qualify a story as a Blindspot; a celebrity death covered unevenly is not a political blindspot.",
+  "_note": "Topic rules are matched against a story's combined headlines. First match by weight wins; a story may carry up to three topics. Keep patterns specific - a bare 'trade' will swallow half the feed. The political flag marks topics that can qualify a story for the Umbra feed; a celebrity death covered unevenly is not a political coverage gap.",
   "topics": [
     {
       "id": "us-politics",

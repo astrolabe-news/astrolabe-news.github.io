@@ -1,44 +1,47 @@
-/* Fulcrum design tokens.
+/* Astrolabe design tokens.
    Light is the default and is defined on bare :root so nothing depends on a media query
    to have a value. Dark redefines only what changes, under both the system preference
    and an explicit data-theme, so the switcher wins in either direction. */
 
 :root {
-  /* Paper ground. Warm off-white, not pure grey - the whole product sits on it. */
-  --paper:        #F2F1EC;
-  --surface:      #FFFFFF;
-  --panel:        #E7E6E0;
-  --panel-soft:   #EDECE6;
-  --ink:          #17171A;
-  --ink-2:        #4A4A50;
-  --ink-3:        #74747C;
-  --rule:         #D6D5CE;
-  --rule-strong:  #B9B8B0;
+  /* Paper ground. Warm, but pushed toward cream rather than the grey-beige this kind of
+     product usually sits on - more yellow in it, and a browner ink to match. */
+  --paper:        #F6F1E4;
+  --surface:      #FFFDF8;
+  --panel:        #EAE3D1;
+  --panel-soft:   #F0EADA;
+  --ink:          #1D1A15;
+  --ink-2:        #4F4A3F;
+  --ink-3:        #7A7264;
+  --rule:         #DED6C2;
+  --rule-strong:  #BFB49B;
 
   /* The political spectrum. Left blue, right red, centre neutral - matching the live
      web app. Never used as the only signal; every segment carries a text label too. */
-  --left:         #3B6BA5;
-  --left-deep:    #24507F;
-  --left-soft:    rgba(59, 107, 165, 0.20);
-  --center:       #FFFFFF;
-  --center-ink:   #17171A;
-  --right:        #8E3037;
-  --right-deep:   #6E2229;
-  --right-soft:   rgba(142, 48, 55, 0.20);
-  --unrated:      #A9A8A0;
+  --left:         #2E5E8C;
+  --left-deep:    #1B4468;
+  --left-soft:    rgba(46, 94, 140, 0.20);
+  --center:       #FFFDF8;
+  --center-ink:   #1D1A15;
+  --right:        #9A3B33;
+  --right-deep:   #762A24;
+  --right-soft:   rgba(154, 59, 51, 0.20);
+  --unrated:      #A79E8A;
 
-  /* Fulcrum's own accent. Ochre, deliberately unlike the original's tan, and far
-     enough from both spectrum colours to never be mistaken for a bias signal. */
-  --accent:       #B5892E;
-  --accent-soft:  #E8DCC0;
-  --accent-ink:   #3D2E0C;
+  /* Astrolabe's accent: deep pine. Chosen because it is the clearest break from the tan
+     this layout would otherwise wear, and because green sits far enough from both
+     spectrum colours that it can never be misread as a bias signal. */
+  --accent:       #1F5646;
+  --accent-soft:  #DCE7DC;
+  --accent-ink:   #10312A;
+  --accent-bright:#2E7D63;
 
   --bar-h:        22px;
   --radius:       6px;
   --radius-pill:  999px;
   --shadow:       0 1px 2px rgba(0,0,0,.06), 0 4px 12px rgba(0,0,0,.04);
 
-  --font-display: 'Archivo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-display: 'Bricolage Grotesque', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --font-ui:      'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
   --maxw:         1180px;
@@ -47,15 +50,15 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --paper:       #141416;
-    --surface:     #1C1C1F;
-    --panel:       #232327;
-    --panel-soft:  #1F1F23;
-    --ink:         #EDEDEF;
-    --ink-2:       #B4B4BC;
-    --ink-3:       #8A8A93;
-    --rule:        #313137;
-    --rule-strong: #45454D;
+    --paper:       #16150F;
+    --surface:     #1E1C15;
+    --panel:       #262319;
+    --panel-soft:  #211F17;
+    --ink:         #F0EBDD;
+    --ink-2:       #BCB4A2;
+    --ink-3:       #8E8676;
+    --rule:        #35311F;
+    --rule-strong: #4A4531;
     --left:        #5B8CC4;
     --left-deep:   #7BA6D8;
     --left-soft:   rgba(91, 140, 196, 0.26);
@@ -65,23 +68,24 @@
     --right-deep:  #D97880;
     --right-soft:  rgba(194, 84, 92, 0.26);
     --unrated:     #6A6A72;
-    --accent:      #D6A94A;
-    --accent-soft: #3A2F16;
-    --accent-ink:  #F3E3BE;
+    --accent:      #6FBFA0;
+    --accent-soft: #16332A;
+    --accent-ink:  #CFEADF;
+    --accent-bright:#8FD4B8;
     --shadow:      0 1px 2px rgba(0,0,0,.4), 0 4px 14px rgba(0,0,0,.3);
   }
 }
 
 :root[data-theme="dark"] {
-  --paper:       #141416;
-  --surface:     #1C1C1F;
-  --panel:       #232327;
-  --panel-soft:  #1F1F23;
-  --ink:         #EDEDEF;
-  --ink-2:       #B4B4BC;
-  --ink-3:       #8A8A93;
-  --rule:        #313137;
-  --rule-strong: #45454D;
+  --paper:       #16150F;
+  --surface:     #1E1C15;
+  --panel:       #262319;
+  --panel-soft:  #211F17;
+  --ink:         #F0EBDD;
+  --ink-2:       #BCB4A2;
+  --ink-3:       #8E8676;
+  --rule:        #35311F;
+  --rule-strong: #4A4531;
   --left:        #5B8CC4;
   --left-deep:   #7BA6D8;
   --left-soft:   rgba(91, 140, 196, 0.26);
@@ -91,8 +95,9 @@
   --right-deep:  #D97880;
   --right-soft:  rgba(194, 84, 92, 0.26);
   --unrated:     #6A6A72;
-  --accent:      #D6A94A;
-  --accent-soft: #3A2F16;
-  --accent-ink:  #F3E3BE;
+  --accent:      #6FBFA0;
+  --accent-soft: #16332A;
+  --accent-ink:  #CFEADF;
+  --accent-bright:#8FD4B8;
   --shadow:      0 1px 2px rgba(0,0,0,.4), 0 4px 14px rgba(0,0,0,.3);
 }

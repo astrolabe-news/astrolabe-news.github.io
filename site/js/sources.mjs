@@ -5,6 +5,7 @@ import * as store from './store.mjs';
 import { chrome, footer } from './components/chrome.mjs';
 import { logo } from './components/logo.mjs';
 import { BIAS_LABEL, ORDER } from './components/capsules.mjs';
+import { BRAND } from './brand.mjs';
 
 const [sourceList, meta] = await Promise.all([store.sources(), store.meta()]);
 store.applyTheme();
@@ -48,7 +49,7 @@ mount('#app',
   h('div', { class: 'page-head' },
     h('h1', {}, 'Source ratings'),
     h('p', { class: 'intro' },
-      `Every one of the ${sourceList.length} outlets Fulcrum reads, with the bias, factuality and ownership used to work out each story's coverage. `,
+      `Every one of the ${sourceList.length} outlets ${BRAND.name} reads, with the bias, factuality and ownership used to work out each story's coverage. `,
       'Ratings apply to the outlet as a whole, not to individual articles, and are derived from publicly published assessments by AllSides and Media Bias/Fact Check.')
   ),
   h('div', { style: { display: 'flex', gap: '8px', flexWrap: 'wrap', alignItems: 'center', marginBottom: '16px' } },

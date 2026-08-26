@@ -6,6 +6,7 @@ import { chrome, footer } from './components/chrome.mjs';
 import { biasBar } from './components/biasbar.mjs';
 import { logo } from './components/logo.mjs';
 import { BIAS_LABEL } from './components/capsules.mjs';
+import { BRAND } from './brand.mjs';
 
 const [meta, byDomain] = await Promise.all([store.meta(), store.sourceMap()]);
 store.applyTheme();
@@ -16,7 +17,7 @@ const history = store.state().history;
 
 if (!history.length) {
   mount('#app',
-    h('div', { class: 'page-head' }, h('h1', {}, 'My news bias')),
+    h('div', { class: 'page-head' }, h('h1', {}, BRAND.reading)),
     h('div', { class: 'empty-state' },
       h('h2', {}, 'Nothing to report yet'),
       h('p', {}, 'Read a few stories and this page will show the balance of what you have been reading — which outlets you lean on, and whether your diet skews one way.'),
@@ -63,7 +64,7 @@ function render() {
 
   mount('#app',
     h('div', { class: 'page-head' },
-      h('h1', {}, 'My news bias'),
+      h('h1', {}, BRAND.reading),
       h('p', { class: 'intro' }, 'Worked out in your browser from the stories you have opened. Nothing here has been sent anywhere, and clearing your browser data clears it.')),
     h('div', { class: 'bias-hero' },
       h('div', {},
@@ -120,7 +121,7 @@ function verdict([l, c, r]) {
   if (Math.abs(gap) <= 8) return 'Your reading is close to evenly split across the spectrum.';
   const side = gap > 0 ? 'left' : 'right';
   const other = gap > 0 ? 'right' : 'left';
-  return `The stories you open are covered more heavily by ${side}-leaning outlets. The Blindspot feed is the quickest way to see what the ${other} is running that you are missing.`;
+  return `The stories you open are covered more heavily by ${side}-leaning outlets. The ${BRAND.gap.name} feed is the quickest way to see what the ${other} is running that you are missing.`;
 }
 
 // Stacked bars, one per period, in the same left/centre/right order as everything else.

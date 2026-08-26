@@ -2,6 +2,7 @@
 import { h, mount, frag, ago } from './render.mjs';
 import * as store from './store.mjs';
 import { chrome, footer } from './components/chrome.mjs';
+import { BRAND } from './brand.mjs';
 import { cardHero, cardRow, cardList, cardGrid, cardBlind } from './components/card.mjs';
 import { biasBar } from './components/biasbar.mjs';
 
@@ -74,7 +75,7 @@ function leadColumn() {
   );
 }
 
-/* ---------- column 3: blindspot panel and the bias teaser ---------- */
+/* ---------- column 3: the Umbra panel and the reading-balance teaser ---------- */
 function sideColumn() {
   const bs = [...home.blindspots.left.slice(0, 1), ...home.blindspots.right.slice(0, 1)]
     .concat(home.blindspots.right.slice(1, 2)).filter(Boolean).slice(0, 2);
@@ -84,15 +85,15 @@ function sideColumn() {
   return h('div', { class: 'col col-side' },
     h('div', { class: 'blind-panel' },
       h('div', { class: 'blind-head' },
-        h('span', { class: 'blind-logo' }, 'BLINDSPOT'),
+        h('span', { class: 'blind-logo' }, BRAND.gap.wordmark),
       ),
-      h('p', { class: 'blind-copy' }, 'Stories disproportionately covered by one side of the political spectrum. ',
-        h('a', { href: 'about.html#blindspot' }, 'Learn more.')),
+      h('p', { class: 'blind-copy' }, `${BRAND.gap.blurb} `,
+        h('a', { href: 'about.html#blindspot' }, 'How this is worked out.')),
       bs.map((s) => cardBlind(s, byDomain)),
-      h('a', { class: 'btn-ghost blind-cta', href: 'blindspot.html' }, 'View Blindspot Feed')
+      h('a', { class: 'btn-ghost blind-cta', href: 'umbra.html' }, `View the ${BRAND.gap.name} feed`)
     ),
     h('div', { class: 'sec' },
-      h('div', { class: 'sec-head' }, h('h2', {}, 'My News Bias')),
+      h('div', { class: 'sec-head' }, h('h2', {}, BRAND.reading)),
       h('div', { class: 'mybias' },
         hist.length
           ? frag(
@@ -105,7 +106,7 @@ function sideColumn() {
               h('div', { class: 'biasbar' },
                 ['left', 'center', 'right'].map((side) =>
                   h('div', { class: `seg seg-${side}`, style: { flex: 1, opacity: .35 } }, '?'))),
-              h('p', { class: 'mybias-copy' }, 'Read a few stories and Fulcrum will show you the balance of what you have been reading. It is worked out in your browser and never sent anywhere.')
+              h('p', { class: 'mybias-copy' }, `Read a few stories and ${BRAND.name} will show you the balance of what you have been reading. It is worked out in your browser and never sent anywhere.`)
             )
       )
     )
@@ -172,7 +173,7 @@ function topicBands() {
           cardHero(stories[0], byDomain)
         ),
         h('aside', { class: 'band-side' },
-          h('p', { class: 'sec-sub' }, blind.length ? `${topic.name} Blindspots` : 'More coverage'),
+          h('p', { class: 'sec-sub' }, blind.length ? `${topic.name}: ${BRAND.gap.name}` : 'More coverage'),
           (blind.length ? blind : stories.slice(1)).slice(0, 2)
             .map((s) => (s.b ? cardBlind(s, byDomain) : cardGrid(s, byDomain)))
         )

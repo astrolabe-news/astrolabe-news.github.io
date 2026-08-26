@@ -5,6 +5,7 @@ import * as store from './store.mjs';
 import { chrome, footer } from './components/chrome.mjs';
 import { cardGrid, cardRow } from './components/card.mjs';
 import { capsules, ORDER } from './components/capsules.mjs';
+import { BRAND, titled } from './brand.mjs';
 
 const params = new URLSearchParams(location.search);
 const place = params.get('place') || store.state().place;
@@ -17,7 +18,7 @@ mount('#foot', footer(meta));
 if (!place) {
   mount('#app', picker('Local News', 'Pick a place to see the stories being written about it, and who is writing them.'));
 } else {
-  document.title = `News about ${place} — Fulcrum`;
+  document.title = titled(`News about ${place}`);
   const needle = place.toLowerCase();
   const stories = idx.filter((s) => s.pl && s.pl.toLowerCase() === needle);
   const localOutlets = sourceList.filter(
@@ -51,7 +52,7 @@ function head(place, stories, outlets) {
   return h('div', { class: 'page-head' },
     h('h1', {}, h('span', { class: 'avatar' }, place[0].toUpperCase()), `News about ${place}`),
     h('p', { class: 'intro' },
-      `Stories Fulcrum has located in ${place} over the past seven days, with the spread of outlets covering each one. `,
+      `Stories ${BRAND.name} has located in ${place} over the past seven days, with the spread of outlets covering each one. `,
       `${stories.length} stor${stories.length === 1 ? 'y' : 'ies'}`,
       outlets.length ? `, and ${outlets.length} news outlet${outlets.length === 1 ? '' : 's'} based here.` : '.')
   );

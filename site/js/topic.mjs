@@ -4,6 +4,7 @@ import { h, mount } from './render.mjs';
 import * as store from './store.mjs';
 import { chrome, footer } from './components/chrome.mjs';
 import { cardGrid, cardRow, cardBlind } from './components/card.mjs';
+import { BRAND, titled } from './brand.mjs';
 
 const id = new URLSearchParams(location.search).get('id');
 const [idx, meta, byDomain] = await Promise.all([store.index(), store.meta(), store.sourceMap()]);
@@ -18,7 +19,7 @@ if (!topic) {
   mount('#app', h('div', { class: 'empty-state' }, h('h2', {}, 'Unknown topic'),
     h('p', {}, 'Pick one from the strip at the top of any page.')));
 } else {
-  document.title = `${topic.name} — Fulcrum`;
+  document.title = titled(topic.name);
   const blind = stories.filter((s) => s.b);
   mount('#app',
     head(topic, stories, blind),
@@ -30,10 +31,10 @@ if (!topic) {
             h('div', { class: 'sec-head', style: { marginTop: '26px' } }, h('h2', {}, 'More coverage')),
             stories.slice(6, 26).map((s) => cardRow(s, byDomain))),
           h('aside', {},
-            h('div', { class: 'sec-head' }, h('h2', {}, `${topic.name} Blindspots`)),
+            h('div', { class: 'sec-head' }, h('h2', {}, `${topic.name}: ${BRAND.gap.name}`)),
             blind.length
               ? blind.slice(0, 4).map((s) => cardBlind(s, byDomain))
-              : h('p', { class: 'sec-sub' }, 'No blindspots in this topic right now — coverage is reaching both sides.')
+              : h('p', { class: 'sec-sub' }, 'Nothing here right now: coverage in this topic is reaching both sides.')
           ))
       : h('div', { class: 'empty-state' }, h('h2', {}, 'Nothing here yet'),
           h('p', {}, 'No stories matched this topic in the last seven days.'))

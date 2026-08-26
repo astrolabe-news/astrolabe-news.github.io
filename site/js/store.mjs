@@ -23,7 +23,7 @@ export async function sourceMap() {
 }
 
 /* ---------- local state ---------- */
-const KEY = 'fulcrum:v1';
+const KEY = 'astrolabe:v1';
 const blank = { follows: [], history: [], place: null, theme: 'auto' };
 
 export function state() {

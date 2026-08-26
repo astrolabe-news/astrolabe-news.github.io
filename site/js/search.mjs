@@ -4,6 +4,7 @@ import { h, mount } from './render.mjs';
 import * as store from './store.mjs';
 import { chrome, footer } from './components/chrome.mjs';
 import { cardRow } from './components/card.mjs';
+import { BRAND, titled } from './brand.mjs';
 
 const q = (new URLSearchParams(location.search).get('q') || '').trim();
 const [idx, meta, byDomain] = await Promise.all([store.index(), store.meta(), store.sourceMap()]);
@@ -11,7 +12,7 @@ store.applyTheme();
 mount('#chrome', chrome({ topics: meta.topics.slice(0, 12) }));
 mount('#foot', footer(meta));
 
-document.title = q ? `${q} — Fulcrum` : 'Search — Fulcrum';
+document.title = titled(q || 'Search');
 
 let results = [];
 let note = null;
@@ -24,7 +25,7 @@ if (/^https?:\/\//i.test(q)) {
   if (hit) {
     location.replace(`story.html?id=${hit}`);
   } else {
-    note = `No story here contains that link. Fulcrum only covers ${meta.outlets} outlets, and keeps stories for seven days.`;
+    note = `No story here contains that link. ${BRAND.name} only covers ${meta.outlets} outlets, and keeps stories for seven days.`;
   }
 } else if (q) {
   const terms = q.toLowerCase().split(/\s+/).filter(Boolean);

@@ -1,7 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="10" fill="#17171A"/>
-  <!-- A lever on a fulcrum: the bar tips, the pivot does not. -->
-  <rect x="8" y="24" width="22" height="9" rx="1.5" fill="#3B6BA5" transform="rotate(-9 32 34)"/>
-  <rect x="34" y="24" width="22" height="9" rx="1.5" fill="#8E3037" transform="rotate(-9 32 34)"/>
-  <path d="M32 36 L41 52 L23 52 Z" fill="#B5892E"/>
+  <rect width="64" height="64" rx="10" fill="#1D1A15"/>
+  <!-- An astrolabe's rings, with the disc partly in shadow. -->
+  <circle cx="32" cy="32" r="20" fill="none" stroke="#F6F1E4" stroke-width="3"/>
+  <circle cx="32" cy="32" r="11" fill="none" stroke="#2E7D63" stroke-width="3"/>
+  <path d="M32 12 A20 20 0 0 1 32 52 Z" fill="#2E5E8C" opacity=".55"/>
+  <path d="M32 12 A20 20 0 0 0 32 52 Z" fill="#9A3B33" opacity=".55"/>
+  <line x1="12" y1="32" x2="52" y2="32" stroke="#F6F1E4" stroke-width="3"/>
 </svg>

@@ -5,6 +5,7 @@ import { chrome, footer } from './components/chrome.mjs';
 import { biasBar, coverageLine } from './components/biasbar.mjs';
 import { logoRow } from './components/logo.mjs';
 import { thumb } from './components/card.mjs';
+import { BRAND } from './brand.mjs';
 
 const [home, meta, byDomain] = await Promise.all([store.home(), store.meta(), store.sourceMap()]);
 store.applyTheme();
@@ -17,7 +18,7 @@ const stories = await Promise.all(ids.map((id) => store.story(id).catch(() => nu
 
 mount('#app',
   h('div', { class: 'page-head' },
-    h('h1', {}, 'Daily Briefing'),
+    h('h1', {}, BRAND.digest),
     b && h('p', { class: 'intro' },
       `${b.stories} stories drawn from ${b.articles} articles, about ${b.readMinutes} minutes to read. `,
       'These are the stories the most outlets ran today, with the spread of who ran them.')),

@@ -3,6 +3,7 @@
 import { h, shortAgo } from '../render.mjs';
 import { biasBar, spread, coverageLine } from './biasbar.mjs';
 import { logoRow } from './logo.mjs';
+import { BRAND } from '../brand.mjs';
 
 const href = (s) => `story.html?id=${s.i}`;
 
@@ -79,7 +80,7 @@ export function cardBlind(s, byDomain) {
     thumb(s),
     h('div', { class: 'body' },
       h('div', { class: 'meta' },
-        h('span', { class: 'blindtag' }, 'Blindspot',
+        h('span', { class: 'blindtag' }, BRAND.gap.name,
           h('span', { class: 'pill' }, share === 0
             ? `0% ${side === 'left' ? 'Left' : 'Right'}`
             : `Only ${share}% ${side === 'left' ? 'Left' : 'Right'}`)),

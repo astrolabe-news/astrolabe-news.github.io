@@ -1,12 +1,13 @@
 // Shared page furniture: utility bar, masthead, interest chips, footer.
 import { h, icon, ICONS } from '../render.mjs';
 import * as store from '../store.mjs';
+import { BRAND } from '../brand.mjs';
 
 const NAV = [
   { href: 'index.html', label: 'Home' },
-  { href: 'my-bias.html', label: 'For You' },
+  { href: 'my-bias.html', label: BRAND.reading },
   { href: 'local.html', label: 'Local' },
-  { href: 'blindspot.html', label: 'Blindspot' }
+  { href: 'umbra.html', label: BRAND.gap.name }
 ];
 
 export function chrome({ current = '', topics = [] } = {}) {
@@ -44,8 +45,8 @@ function utility() {
 function promo() {
   return h('div', { class: 'promo' },
     h('div', { class: 'wrap' },
-      h('span', {}, 'Every side of every story. Free, with no account.'),
-      h('a', { class: 'cta', href: 'blindspot.html' }, 'See the Blindspots')
+      h('span', {}, BRAND.promo),
+      h('a', { class: 'cta', href: 'umbra.html' }, BRAND.promoCta)
     )
   );
 }
@@ -53,9 +54,9 @@ function promo() {
 function masthead(current) {
   return h('header', { class: 'masthead' },
     h('div', { class: 'wrap' },
-      h('a', { class: 'wordmark', href: 'index.html', 'aria-label': 'Fulcrum home' },
-        h('span', { class: 'mark' }, 'FULCRUM'),
-        h('span', { class: 'sub' }, 'News')),
+      h('a', { class: 'wordmark', href: 'index.html', 'aria-label': `${BRAND.name} home` },
+        h('span', { class: 'mark' }, BRAND.wordmark),
+        h('span', { class: 'sub' }, BRAND.suffix)),
       h('nav', { class: 'nav' },
         NAV.map((n) => h('a', { href: n.href, 'aria-current': n.href === current ? 'page' : null }, n.label))),
       h('form', {
@@ -109,13 +110,13 @@ export function footer(meta) {
   return h('footer', { class: 'foot' },
     h('div', { class: 'wrap' },
       h('div', { class: 'cols' },
-        col('News', [['Home', 'index.html'], ['Blindspot Feed', 'blindspot.html'], ['Local News', 'local.html'], ['Daily Briefing', 'briefing.html']]),
-        col('Understand', [['Source ratings', 'sources.html'], ['How bias is rated', 'about.html#bias'], ['What is a Blindspot?', 'about.html#blindspot'], ['My News Bias', 'my-bias.html']]),
+        col('News', [['Home', 'index.html'], [BRAND.gap.name, 'umbra.html'], ['Local News', 'local.html'], [BRAND.digest, 'briefing.html']]),
+        col('Understand', [['Source ratings', 'sources.html'], ['How bias is rated', 'about.html#bias'], [`What is ${BRAND.gap.name}?`, 'about.html#blindspot'], [BRAND.reading, 'my-bias.html']]),
         col('Topics', (meta?.topics ?? []).slice(0, 5).map((t) => [t.name, `topic.html?id=${t.id}`])),
-        col('About', [['How Fulcrum works', 'about.html'], ['Where the data comes from', 'about.html#data'], ['Limitations', 'about.html#limits']])
+        col('About', [[`How ${BRAND.name} works`, 'about.html'], ['Where the data comes from', 'about.html#data'], ['Limitations', 'about.html#limits']])
       ),
       h('div', { class: 'base' },
-        h('div', {}, `Fulcrum aggregates headlines from ${meta?.outlets ?? 0} news outlets. Bias and factuality ratings are derived from publicly published assessments by AllSides and Media Bias/Fact Check, and are applied to outlets, not to individual articles.`),
+        h('div', {}, `${BRAND.name} aggregates headlines from ${meta?.outlets ?? 0} news outlets. Bias and factuality ratings are derived from publicly published assessments by AllSides and Media Bias/Fact Check, and are applied to outlets, not to individual articles.`),
         h('div', { style: { marginTop: '8px' } }, 'Headlines and images belong to their publishers and link back to the original reporting. Free to use, no account, nothing tracked — your reading history stays in your browser.')
       )
     )

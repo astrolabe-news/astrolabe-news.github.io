@@ -6,6 +6,7 @@ import { biasBar } from './components/biasbar.mjs';
 import { capsules, untracked, BIAS_LABEL } from './components/capsules.mjs';
 import { logo } from './components/logo.mjs';
 import { cardRow } from './components/card.mjs';
+import { BRAND, titled } from './brand.mjs';
 
 const id = new URLSearchParams(location.search).get('id');
 const [meta, byDomain] = await Promise.all([store.meta(), store.sourceMap()]);
@@ -24,7 +25,7 @@ try {
   throw new Error('not found');
 }
 
-document.title = `${s.title} — Fulcrum`;
+document.title = titled(s.title);
 store.recordRead(s);
 
 const OWNERSHIP = {
