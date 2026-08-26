@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="10" fill="#17171A"/>
+  <!-- A lever on a fulcrum: the bar tips, the pivot does not. -->
+  <rect x="8" y="24" width="22" height="9" rx="1.5" fill="#3B6BA5" transform="rotate(-9 32 34)"/>
+  <rect x="34" y="24" width="22" height="9" rx="1.5" fill="#8E3037" transform="rotate(-9 32 34)"/>
+  <path d="M32 36 L41 52 L23 52 Z" fill="#B5892E"/>
+</svg>
