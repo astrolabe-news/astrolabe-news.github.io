@@ -17,13 +17,24 @@ const FACT_SCORE = { 'very-low': 0, low: 1, mixed: 2, high: 3, 'very-high': 4 };
 const FACT_LABEL = ['Very Low', 'Low', 'Mixed', 'High', 'Very High'];
 const LOW_FACTUALITY = new Set(['very-low', 'low']);
 
-// Ground News's published rule: a side is blind to a story when almost none of its
-// outlets carry it while the other side does.
+// A side is blind to a story when it covers it far less than that side normally covers
+// anything - not when it falls below some fixed percentage.
+//
+// This matters more than it sounds. Across our corpus the average story is carried by
+// ~31% left-leaning and ~22% right-leaning outlets, because right-leaning outlets in the
+// registry simply publish less. Against a flat 20% threshold, a 20%-left story is at 0.65x
+// the left's normal participation while a 20%-right story is at 0.91x the right's - so the
+// same number is a much harder test for one side than the other, and the feed fills up
+// with right blindspots regardless of what is actually happening.
+//
+// Measuring each side against its own baseline removes that, and keeps working as the
+// registry changes.
 const BLINDSPOT = {
-  maxSideSources: 10,   // absolute floor: almost nobody on that side ran it
-  maxSideShare: 0.20,   // and they are a small slice of the coverage
-  minOtherShare: 0.33,  // while the other side ran it properly
-  minTotal: 8,
+  maxSideSources: 10,      // absolute floor: almost nobody on that side ran it
+  maxSideShare: 0.22,      // hard ceiling, so the label never reads "Only 40% Left"
+  relativeToBaseline: 0.5, // and under half that side's normal participation
+  minOtherRatio: 1.0,      // while the other side is at or above its own normal
+  minTotal: 6,
   maxLowFactuality: 0.35
 };
 
@@ -85,7 +96,9 @@ export function buildStory(cluster, byDomain, taxonomy) {
       buckets: Object.fromEntries(BIAS_ORDER.map((b) => [b, buckets[b]])),
       untracked
     },
-    blindspot: detectBlindspot(sides, rated, sources, topics, taxonomy),
+    // Filled in by applyBlindspots once the whole corpus is known.
+    blindspot: null,
+    _blind: { sides, rated, lowShare: lowFactualityShare(sources), political: isPolitical(topics, taxonomy) },
     factuality: aggregateFactuality(sources),
     ownership: aggregateOwnership(sources),
     brokeFirst: { domain: first.domain, source: first.source, publishedAt: first.publishedAt },
@@ -143,34 +156,72 @@ function pickLead(articles, byDomain, clusterRare) {
   }
 }
 
-function detectBlindspot(sides, rated, sources, topics, taxonomy) {
-  if (rated < BLINDSPOT.minTotal) return null;
-  // A Blindspot is a politically-charged story one side is not covering. A celebrity
-  // death with lopsided coverage is lopsided, but it is not a blindspot.
-  // The story's *primary* topic must be political. A tornado in France picks up the
-  // Europe tag as a secondary topic; that does not make it a political blindspot.
-  const political = new Set(taxonomy.topics.filter((t) => t.political).map((t) => t.id));
-  if (!topics.length || !political.has(topics[0].id)) return null;
-  const lowShare = sources.filter((s) => LOW_FACTUALITY.has(s.factuality)).length / (sources.length || 1);
-  if (lowShare > BLINDSPOT.maxLowFactuality) return null;
+// Two-pass: a story cannot know whether its coverage is unusual until every story is
+// built and the corpus baseline is known.
+export function applyBlindspots(stories, opts = {}) {
+  const o = { ...BLINDSPOT, ...opts };
+  const eligible = stories.filter((s) => s._blind.rated >= o.minTotal);
 
-  const leftShare = sides.left / rated;
-  const rightShare = sides.right / rated;
-
-  // Both conditions matter. The absolute count alone lets a balanced 24-source story
-  // qualify just because one side happens to have 9 outlets on it.
-  if (sides.left < BLINDSPOT.maxSideSources && leftShare <= BLINDSPOT.maxSideShare && rightShare > BLINDSPOT.minOtherShare) {
-    return { side: 'left', share: Math.round(leftShare * 100), label: shareLabel(leftShare, 'Left') };
+  const baseline = { left: 0, center: 0, right: 0 };
+  if (eligible.length) {
+    for (const s of eligible) {
+      baseline.left += s.coverage.pct.left;
+      baseline.center += s.coverage.pct.center;
+      baseline.right += s.coverage.pct.right;
+    }
+    for (const k of ['left', 'center', 'right']) baseline[k] = baseline[k] / eligible.length / 100;
   }
-  if (sides.right < BLINDSPOT.maxSideSources && rightShare <= BLINDSPOT.maxSideShare && leftShare > BLINDSPOT.minOtherShare) {
-    return { side: 'right', share: Math.round(rightShare * 100), label: shareLabel(rightShare, 'Right') };
+
+  for (const s of stories) {
+    s.blindspot = detect(s, baseline, o);
+    delete s._blind;
+  }
+  return {
+    baseline: {
+      left: Math.round(baseline.left * 100),
+      center: Math.round(baseline.center * 100),
+      right: Math.round(baseline.right * 100)
+    },
+    eligible: eligible.length
+  };
+}
+
+function detect(story, baseline, o) {
+  const { sides, rated, lowShare, political } = story._blind;
+  if (rated < o.minTotal) return null;
+  if (lowShare > o.maxLowFactuality) return null;
+  if (!political) return null;
+
+  const share = { left: sides.left / rated, right: sides.right / rated };
+
+  for (const [side, other] of [['left', 'right'], ['right', 'left']]) {
+    const base = baseline[side] || 0.01;
+    const otherBase = baseline[other] || 0.01;
+    if (sides[side] >= o.maxSideSources) continue;
+    if (share[side] > o.maxSideShare) continue;
+    if (share[side] / base > o.relativeToBaseline) continue;
+    if (share[other] / otherBase < o.minOtherRatio) continue;
+    const pct = Math.round(share[side] * 100);
+    const label = side === 'left' ? 'Left' : 'Right';
+    return {
+      side,
+      share: pct,
+      label: pct === 0 ? `0% ${label}` : `Only ${pct}% ${label}`,
+      // How far below normal, for the story page to state plainly.
+      versusNormal: Math.round((share[side] / base) * 100)
+    };
   }
   return null;
 }
 
-function shareLabel(share, side) {
-  const pct = Math.round(share * 100);
-  return pct === 0 ? `0% ${side}` : `Only ${pct}% ${side}`;
+const LOW = LOW_FACTUALITY;
+function lowFactualityShare(sources) {
+  return sources.filter((s) => LOW.has(s.factuality)).length / (sources.length || 1);
+}
+
+function isPolitical(topics, taxonomy) {
+  const political = new Set(taxonomy.topics.filter((t) => t.political).map((t) => t.id));
+  return topics.length > 0 && political.has(topics[0].id);
 }
 
 function aggregateFactuality(sources) {

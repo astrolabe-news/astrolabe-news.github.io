@@ -27,7 +27,7 @@ mount('#app',
       h('a', { href: 'about.html#blindspot', style: { textDecoration: 'underline' } }, 'How a Blindspot is worked out.'))
   ),
   h('div', { class: 'panel', style: { marginTop: '18px' } },
-    h('div', { style: { display: 'flex', gap: '30px', flexWrap: 'wrap' } },
+    h('div', { style: { display: 'flex', gap: '34px', flexWrap: 'wrap' } },
       h('div', {},
         h('h3', {}, `${left.length} for the Left`),
         h('div', { style: { fontSize: '13px', color: 'var(--ink-2)' } },
@@ -36,7 +36,11 @@ mount('#app',
         h('h3', {}, `${right.length} for the Right`),
         h('div', { style: { fontSize: '13px', color: 'var(--ink-2)' } },
           topicsOf(right).map(([, n]) => n).join(' · ') || 'Nothing today'))
-    )
+    ),
+    meta.baseline && h('p', { style: { fontSize: '12.5px', color: 'var(--ink-2)', margin: '14px 0 0', lineHeight: '1.55', maxWidth: '78ch' } },
+      `Judged against how much each side normally covers. Across the ${meta.eligible} stories with enough coverage to assess, `,
+      `the average one is carried by ${meta.baseline.left}% left-leaning, ${meta.baseline.center}% centre and ${meta.baseline.right}% right-leaning outlets. `,
+      'A story lands here when one side is running it at less than half of that side\'s usual rate — not when it falls below a fixed percentage, which would just punish whichever side publishes less.')
   ),
   h('div', { class: 'blind-cols' },
     column('For the Left', 'Stories that had little to no reporting on the Left.', left),
@@ -56,6 +60,6 @@ function column(title, sub, list) {
     list.length
       ? h('div', { class: 'blind-grid' }, list.map((s) => cardBlind(s, byDomain)))
       : h('p', { style: { fontSize: '14px', color: 'var(--ink-2)', paddingTop: '10px' } },
-          'No blindspots on this side right now. That happens on quiet news days, and it is a real result rather than a gap — the feed only lists stories that clear the threshold.')
+          'No blindspots on this side right now. That is a real result rather than a gap — the feed only lists stories that clear the threshold.')
   );
 }

@@ -5,7 +5,7 @@ import { join } from 'node:path';
 
 const HOUR = 3600e3;
 
-export async function build(stories, sources, taxonomy, outDir, { log = console.log } = {}) {
+export async function build(stories, sources, taxonomy, outDir, { log = console.log, blindspot = null } = {}) {
   await rm(outDir, { recursive: true, force: true });
   await mkdir(join(outDir, 'story'), { recursive: true });
 
@@ -49,6 +49,10 @@ export async function build(stories, sources, taxonomy, outDir, { log = console.
     articles: ranked.reduce((n, s) => n + s.articles.length, 0),
     outlets: sources.length,
     blindspots: blindspots.length,
+    // The corpus baseline is what blindspot detection is measured against, so the feed
+    // can show its own working.
+    baseline: blindspot?.baseline ?? null,
+    eligible: blindspot?.eligible ?? 0,
     topics: taxonomy.topics.map((t) => ({ id: t.id, name: t.name }))
   }));
 
@@ -71,7 +75,7 @@ function compact(s) {
     n: s.coverage.total, a: s.coverage.articles,
     p: [s.coverage.pct.left, s.coverage.pct.center, s.coverage.pct.right],
     src: topOutlets(s),
-    b: s.blindspot ? [s.blindspot.side, s.blindspot.share] : null,
+    b: s.blindspot ? [s.blindspot.side, s.blindspot.share, s.blindspot.versusNormal] : null,
     tp: s.topics, pl: s.place?.name ?? null,
     f: s.factuality?.label ?? null
   };

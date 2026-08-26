@@ -3,3 +3,4 @@ site/data/
 .scratch/
 .env
 .DS_Store
+state/

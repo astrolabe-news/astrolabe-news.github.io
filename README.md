@@ -33,9 +33,15 @@ Useful flags: `--limit N` caps articles, `--no-llm` forces extractive summaries,
 `--budget N` caps Gemini calls, `--dry` skips all writes.
 
 ```bash
-node pipeline/validate.mjs   # check the source registry and topic rules
-node pipeline/eval.mjs       # inspect cluster quality; how the thresholds get tuned
+node pipeline/validate.mjs              # check the registry and topic rules
+node pipeline/eval.mjs                  # inspect cluster quality; how thresholds get tuned
+node pipeline/discover.mjs --recheck    # find feeds that have gone dead
+node pipeline/discover.mjs cands.json   # find feeds for new outlets, ready to paste in
 ```
+
+Adding outlets is the main lever on quality: more outlets means more stories reach the
+coverage depth where a bias split means anything. Going from 120 to 268 outlets took the
+stories with 8+ distinct outlets from 39 to 93.
 
 ## Deploying
 
@@ -51,7 +57,7 @@ as an artifact. Only cluster state persists, force-pushed as a single orphan com
 
 ## How it works
 
-**Grouping.** Every 30 minutes the pipeline reads ~130 RSS feeds. Headlines are embedded
+**Grouping.** Every 30 minutes the pipeline reads ~277 feeds from 268 outlets. Headlines are embedded
 locally, and an article joins an existing story when it clears both a cosine similarity
 threshold *and* a rare-token overlap test — shared names, places and numbers. Similarity
 alone will happily fuse two unrelated tariff stories; the second test is what stops it.
@@ -68,16 +74,26 @@ Keep the spectrum balanced. `validate.mjs` fails the build if the left and right
 drift more than 25% apart, because a skewed registry makes every story look like a
 blindspot for the lighter side.
 
-**Blindspots.** A story qualifies when fewer than ten outlets on one side ran it, those
-outlets are 20% or less of the coverage, the other side is above a third, at least eight
-rated outlets covered it, no more than 35% of coverage comes from poorly-rated outlets,
-and the story's primary topic is political.
+**Blindspots.** The test is *relative to each side's own baseline*, not a fixed
+percentage. Across the corpus the average story is carried by ~31% left-leaning and ~20%
+right-leaning outlets, because the two sides do not publish at the same rate. A story is
+flagged when one side runs it at under half its usual rate while the other runs it at or
+above theirs, plus absolute floors: six or more rated outlets, fewer than ten on the blind
+side, that side at 22% or less, no more than 35% poorly-rated coverage, and a political
+primary topic.
+
+A fixed threshold looks fairer and is not. With one 20% cutoff for both sides, a 20%-left
+story sits at 0.65x the left's normal participation while a 20%-right story sits at 0.91x
+the right's — so the same number is a much harder test for one side, and the feed fills
+with right blindspots regardless of what is happening. That bug produced a 1-left/5-right
+feed on a balanced registry.
 
 ## What it does badly
 
-- Only ~120 outlets, limited to those with working public feeds. Several major publishers
-  killed their RSS; those are reached through a headline index instead, so they contribute
-  a headline with no image or blurb.
+- 268 outlets, limited to those with working public feeds. Several major publishers killed
+  their RSS; those are reached through a Google News headline index instead, so they
+  contribute a headline with no image or blurb. Around a third of the registry is in that
+  state — `pipeline/discover.mjs --recheck` reports which.
 - Summaries are built from headlines and short feed blurbs, not full articles.
 - Local news is thin — a story is placed somewhere only when its headlines name the place.
 - Clustering still splits and merges wrongly sometimes. `eval.mjs` exists for exactly this.

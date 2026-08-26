@@ -86,7 +86,11 @@ export function cardBlind(s, byDomain) {
         h('span', { class: 'count' }, `${s.n} sources`)
       ),
       h('h3', { class: 'hl' }, s.t),
-      spread(s.p)
+      spread(s.p),
+      s.b[2] != null && h('div', { class: 'cov', style: { marginTop: '8px' } },
+        s.b[2] === 0
+          ? `No ${side} coverage at all`
+          : `About ${Math.round(s.b[2])}% of the ${side} coverage this story would normally get`)
     )
   );
 }

@@ -1275,8 +1275,9 @@
         "MBFC"
       ],
       "feeds": [
-        "https://ijr.com/feed/"
-      ]
+        "https://news.google.com/rss/search?q=when:24h+site:ijr.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "Native feed went dead; reached through a Google News headline index."
     },
     {
       "domain": "bostonherald.com",
@@ -1468,7 +1469,8 @@
       ],
       "feeds": [
         "https://news.google.com/rss/search?q=when:24h+site:spectator.co.uk&hl=en-US&gl=US&ceid=US:en"
-      ]
+      ],
+      "_note": "Native feed went dead; reached through a Google News headline index."
     },
     {
       "domain": "thesun.co.uk",
@@ -1548,7 +1550,8 @@
       ],
       "feeds": [
         "https://news.google.com/rss/search?q=when:24h+site:cnsnews.com&hl=en-US&gl=US&ceid=US:en"
-      ]
+      ],
+      "_note": "Native feed went dead; reached through a Google News headline index."
     },
     {
       "domain": "semafor.com",
@@ -1944,6 +1947,2439 @@
       "feeds": [
         "https://www.democracynow.org/democracynow.rss"
       ]
+    },
+    {
+      "domain": "twitchy.com",
+      "name": "Twitchy",
+      "bias": "right",
+      "factuality": "mixed",
+      "ownership": "corporation",
+      "country": "United States",
+      "city": "Los Angeles",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://twitchy.com/feed/"
+      ]
+    },
+    {
+      "domain": "amgreatness.com",
+      "name": "American Greatness",
+      "bias": "far-right",
+      "factuality": "mixed",
+      "ownership": "independent",
+      "country": "United States",
+      "city": "Los Angeles",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://amgreatness.com/feed/"
+      ]
+    },
+    {
+      "domain": "spectator.org",
+      "name": "The American Spectator",
+      "bias": "right",
+      "factuality": "mixed",
+      "ownership": "independent",
+      "country": "United States",
+      "city": "Arlington",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://spectator.org/feed/"
+      ]
+    },
+    {
+      "domain": "wnd.com",
+      "name": "WND",
+      "bias": "far-right",
+      "factuality": "very-low",
+      "ownership": "independent",
+      "country": "United States",
+      "city": "Washington",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://wnd.com/feed/"
+      ]
+    },
+    {
+      "domain": "issuesinsights.com",
+      "name": "Issues & Insights",
+      "bias": "right",
+      "factuality": "mixed",
+      "ownership": "independent",
+      "country": "United States",
+      "city": "Los Angeles",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://issuesinsights.com/feed/"
+      ]
+    },
+    {
+      "domain": "thecollegefix.com",
+      "name": "The College Fix",
+      "bias": "right",
+      "factuality": "mixed",
+      "ownership": "independent",
+      "country": "United States",
+      "city": "Detroit",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://thecollegefix.com/feed/"
+      ]
+    },
+    {
+      "domain": "lifesitenews.com",
+      "name": "LifeSiteNews",
+      "bias": "far-right",
+      "factuality": "low",
+      "ownership": "independent",
+      "country": "Canada",
+      "city": "Toronto",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://lifesitenews.com/feed/"
+      ]
+    },
+    {
+      "domain": "thecritic.co.uk",
+      "name": "The Critic",
+      "bias": "right",
+      "factuality": "mixed",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "city": "London",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://thecritic.co.uk/feed/"
+      ]
+    },
+    {
+      "domain": "ntd.com",
+      "name": "NTD",
+      "bias": "right",
+      "factuality": "mixed",
+      "ownership": "independent",
+      "country": "United States",
+      "city": "New York",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://ntd.com/feed/"
+      ]
+    },
+    {
+      "domain": "torontosun.com",
+      "name": "Toronto Sun",
+      "bias": "right",
+      "factuality": "mixed",
+      "ownership": "corporation",
+      "country": "Canada",
+      "city": "Toronto",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://torontosun.com/feed/"
+      ]
+    },
+    {
+      "domain": "frontpagemag.com",
+      "name": "FrontPage Magazine",
+      "bias": "far-right",
+      "factuality": "low",
+      "ownership": "independent",
+      "country": "United States",
+      "city": "Los Angeles",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:frontpagemag.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "bizpacreview.com",
+      "name": "BizPac Review",
+      "bias": "right",
+      "factuality": "low",
+      "ownership": "independent",
+      "country": "United States",
+      "city": "West Palm Beach",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:bizpacreview.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "washingtonstand.com",
+      "name": "The Washington Stand",
+      "bias": "right",
+      "factuality": "mixed",
+      "ownership": "independent",
+      "country": "United States",
+      "city": "Washington",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:washingtonstand.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "investors.com",
+      "name": "Investor's Business Daily",
+      "bias": "lean-right",
+      "factuality": "high",
+      "ownership": "corporation",
+      "country": "United States",
+      "city": "Los Angeles",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://investors.com/feed/"
+      ]
+    },
+    {
+      "domain": "city-journal.org",
+      "name": "City Journal",
+      "bias": "lean-right",
+      "factuality": "high",
+      "ownership": "independent",
+      "country": "United States",
+      "city": "New York",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://city-journal.org/rss.xml"
+      ]
+    },
+    {
+      "domain": "unherd.com",
+      "name": "UnHerd",
+      "bias": "lean-right",
+      "factuality": "high",
+      "ownership": "individual",
+      "country": "United Kingdom",
+      "city": "London",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://unherd.com/feed/"
+      ]
+    },
+    {
+      "domain": "rebelnews.com",
+      "name": "Rebel News",
+      "bias": "far-right",
+      "factuality": "low",
+      "ownership": "independent",
+      "country": "Canada",
+      "city": "Toronto",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://rebelnews.com/rss"
+      ]
+    },
+    {
+      "domain": "calgaryherald.com",
+      "name": "Calgary Herald",
+      "bias": "lean-right",
+      "factuality": "high",
+      "ownership": "corporation",
+      "country": "Canada",
+      "city": "Calgary",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://calgaryherald.com/feed/"
+      ]
+    },
+    {
+      "domain": "ottawacitizen.com",
+      "name": "Ottawa Citizen",
+      "bias": "lean-right",
+      "factuality": "high",
+      "ownership": "corporation",
+      "country": "Canada",
+      "city": "Ottawa",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://ottawacitizen.com/feed/"
+      ]
+    },
+    {
+      "domain": "vancouversun.com",
+      "name": "Vancouver Sun",
+      "bias": "lean-right",
+      "factuality": "high",
+      "ownership": "corporation",
+      "country": "Canada",
+      "city": "Vancouver",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://vancouversun.com/feed/"
+      ]
+    },
+    {
+      "domain": "spiked-online.com",
+      "name": "Spiked",
+      "bias": "lean-right",
+      "factuality": "mixed",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "city": "London",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://spiked-online.com/feed/"
+      ]
+    },
+    {
+      "domain": "lifenews.com",
+      "name": "LifeNews",
+      "bias": "right",
+      "factuality": "mixed",
+      "ownership": "independent",
+      "country": "United States",
+      "city": "Washington",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://lifenews.com/feed/"
+      ]
+    },
+    {
+      "domain": "humanevents.com",
+      "name": "Human Events",
+      "bias": "right",
+      "factuality": "mixed",
+      "ownership": "independent",
+      "country": "United States",
+      "city": "Washington",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://humanevents.com/index.rss"
+      ]
+    },
+    {
+      "domain": "israelnationalnews.com",
+      "name": "Arutz Sheva",
+      "bias": "right",
+      "factuality": "mixed",
+      "ownership": "independent",
+      "country": "Israel",
+      "city": "Beit El",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://israelnationalnews.com/Rss.aspx?act=.1"
+      ]
+    },
+    {
+      "domain": "reviewjournal.com",
+      "name": "Las Vegas Review-Journal",
+      "bias": "lean-right",
+      "factuality": "high",
+      "ownership": "individual",
+      "country": "United States",
+      "city": "Las Vegas",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://reviewjournal.com/feed/"
+      ]
+    },
+    {
+      "domain": "theaustralian.com.au",
+      "name": "The Australian",
+      "bias": "lean-right",
+      "factuality": "high",
+      "ownership": "media-conglomerate",
+      "country": "Australia",
+      "city": "Sydney",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:theaustralian.com.au&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "news.com.au",
+      "name": "news.com.au",
+      "bias": "lean-right",
+      "factuality": "mixed",
+      "ownership": "media-conglomerate",
+      "country": "Australia",
+      "city": "Sydney",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:news.com.au&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "post-gazette.com",
+      "name": "Pittsburgh Post-Gazette",
+      "bias": "lean-right",
+      "factuality": "high",
+      "ownership": "individual",
+      "country": "United States",
+      "city": "Pittsburgh",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://post-gazette.com/rss"
+      ]
+    },
+    {
+      "domain": "unionleader.com",
+      "name": "New Hampshire Union Leader",
+      "bias": "lean-right",
+      "factuality": "high",
+      "ownership": "independent",
+      "country": "United States",
+      "city": "Manchester",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "http://www.unionleader.com/search/?f=rss&amp;t=article&amp;l=50&amp;s=start_time&amp;sd=desc&amp;k%5B%5D=%23topstory"
+      ]
+    },
+    {
+      "domain": "skynews.com.au",
+      "name": "Sky News Australia",
+      "bias": "right",
+      "factuality": "mixed",
+      "ownership": "media-conglomerate",
+      "country": "Australia",
+      "city": "Sydney",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:skynews.com.au&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "ocregister.com",
+      "name": "Orange County Register",
+      "bias": "lean-right",
+      "factuality": "high",
+      "ownership": "private-equity",
+      "country": "United States",
+      "city": "Santa Ana",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:ocregister.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "dailykos.com",
+      "name": "Daily Kos",
+      "bias": "far-left",
+      "factuality": "mixed",
+      "ownership": "independent",
+      "country": "United States",
+      "city": "Berkeley",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://dailykos.com/feed/"
+      ]
+    },
+    {
+      "domain": "jpost.com",
+      "name": "The Jerusalem Post",
+      "bias": "lean-right",
+      "factuality": "high",
+      "ownership": "corporation",
+      "country": "Israel",
+      "city": "Jerusalem",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:jpost.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "crooksandliars.com",
+      "name": "Crooks and Liars",
+      "bias": "far-left",
+      "factuality": "mixed",
+      "ownership": "independent",
+      "country": "United States",
+      "city": "Los Angeles",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://crooksandliars.com/rss.xml"
+      ]
+    },
+    {
+      "domain": "wjla.com",
+      "name": "WJLA",
+      "bias": "lean-right",
+      "factuality": "mixed",
+      "ownership": "corporation",
+      "country": "United States",
+      "city": "Arlington",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:wjla.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "richmond.com",
+      "name": "Richmond Times-Dispatch",
+      "bias": "lean-right",
+      "factuality": "high",
+      "ownership": "media-conglomerate",
+      "country": "United States",
+      "city": "Richmond",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:richmond.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "novaramedia.com",
+      "name": "Novara Media",
+      "bias": "far-left",
+      "factuality": "mixed",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "city": "London",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://novaramedia.com/feed/"
+      ]
+    },
+    {
+      "domain": "talkingpointsmemo.com",
+      "name": "Talking Points Memo",
+      "bias": "left",
+      "factuality": "high",
+      "ownership": "independent",
+      "country": "United States",
+      "city": "New York",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://talkingpointsmemo.com/feed/"
+      ]
+    },
+    {
+      "domain": "rollingstone.com",
+      "name": "Rolling Stone",
+      "bias": "left",
+      "factuality": "mixed",
+      "ownership": "media-conglomerate",
+      "country": "United States",
+      "city": "New York",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://rollingstone.com/feed/"
+      ]
+    },
+    {
+      "domain": "gbnews.com",
+      "name": "GB News",
+      "bias": "right",
+      "factuality": "mixed",
+      "ownership": "corporation",
+      "country": "United Kingdom",
+      "city": "London",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://gbnews.com/feeds/feed.rss"
+      ]
+    },
+    {
+      "domain": "opendemocracy.net",
+      "name": "openDemocracy",
+      "bias": "left",
+      "factuality": "mixed",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "city": "London",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://opendemocracy.net/feed/"
+      ]
+    },
+    {
+      "domain": "wired.com",
+      "name": "WIRED",
+      "bias": "lean-left",
+      "factuality": "high",
+      "ownership": "media-conglomerate",
+      "country": "United States",
+      "city": "San Francisco",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://wired.com/feed/"
+      ]
+    },
+    {
+      "domain": "thetimes.co.uk",
+      "name": "The Times",
+      "bias": "lean-right",
+      "factuality": "high",
+      "ownership": "media-conglomerate",
+      "country": "United Kingdom",
+      "city": "London",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:thetimes.co.uk&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "mirror.co.uk",
+      "name": "Daily Mirror",
+      "bias": "left",
+      "factuality": "mixed",
+      "ownership": "corporation",
+      "country": "United Kingdom",
+      "city": "London",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://mirror.co.uk/rss.xml"
+      ]
+    },
+    {
+      "domain": "vanityfair.com",
+      "name": "Vanity Fair",
+      "bias": "left",
+      "factuality": "high",
+      "ownership": "media-conglomerate",
+      "country": "United States",
+      "city": "New York",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://vanityfair.com/rss"
+      ]
+    },
+    {
+      "domain": "inews.co.uk",
+      "name": "The i Paper",
+      "bias": "lean-left",
+      "factuality": "high",
+      "ownership": "corporation",
+      "country": "United Kingdom",
+      "city": "London",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://inews.co.uk/feed/"
+      ]
+    },
+    {
+      "domain": "theverge.com",
+      "name": "The Verge",
+      "bias": "lean-left",
+      "factuality": "high",
+      "ownership": "media-conglomerate",
+      "country": "United States",
+      "city": "New York",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://theverge.com/rss.xml"
+      ]
+    },
+    {
+      "domain": "businessinsider.com",
+      "name": "Business Insider",
+      "bias": "lean-left",
+      "factuality": "mixed",
+      "ownership": "corporation",
+      "country": "United States",
+      "city": "New York",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://businessinsider.com/rss"
+      ]
+    },
+    {
+      "domain": "oklahoman.com",
+      "name": "The Oklahoman",
+      "bias": "lean-right",
+      "factuality": "high",
+      "ownership": "media-conglomerate",
+      "country": "United States",
+      "city": "Oklahoma City",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:oklahoman.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "rawstory.com",
+      "name": "Raw Story",
+      "bias": "left",
+      "factuality": "mixed",
+      "ownership": "independent",
+      "country": "United States",
+      "city": "New York",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:rawstory.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "middleeasteye.net",
+      "name": "Middle East Eye",
+      "bias": "lean-left",
+      "factuality": "mixed",
+      "ownership": "independent",
+      "country": "United Kingdom",
+      "city": "London",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://middleeasteye.net/rss"
+      ]
+    },
+    {
+      "domain": "globaltimes.cn",
+      "name": "Global Times",
+      "bias": "right",
+      "factuality": "low",
+      "ownership": "government",
+      "country": "China",
+      "city": "Beijing",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:globaltimes.cn&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "arkansasonline.com",
+      "name": "Arkansas Democrat-Gazette",
+      "bias": "lean-right",
+      "factuality": "high",
+      "ownership": "individual",
+      "country": "United States",
+      "city": "Little Rock",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:arkansasonline.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "theconversation.com",
+      "name": "The Conversation",
+      "bias": "lean-left",
+      "factuality": "high",
+      "ownership": "independent",
+      "country": "Australia",
+      "city": "Melbourne",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:theconversation.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "haaretz.com",
+      "name": "Haaretz",
+      "bias": "lean-left",
+      "factuality": "high",
+      "ownership": "individual",
+      "country": "Israel",
+      "city": "Tel Aviv",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:haaretz.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "dailymaverick.co.za",
+      "name": "Daily Maverick",
+      "bias": "lean-left",
+      "factuality": "high",
+      "ownership": "independent",
+      "country": "South Africa",
+      "city": "Cape Town",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://dailymaverick.co.za/rss"
+      ]
+    },
+    {
+      "domain": "mg.co.za",
+      "name": "Mail & Guardian",
+      "bias": "lean-left",
+      "factuality": "high",
+      "ownership": "independent",
+      "country": "South Africa",
+      "city": "Johannesburg",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://mg.co.za/rss"
+      ]
+    },
+    {
+      "domain": "stuff.co.nz",
+      "name": "Stuff",
+      "bias": "lean-left",
+      "factuality": "high",
+      "ownership": "independent",
+      "country": "New Zealand",
+      "city": "Wellington",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://stuff.co.nz/rss"
+      ]
+    },
+    {
+      "domain": "spiegel.de",
+      "name": "Der Spiegel",
+      "bias": "lean-left",
+      "factuality": "high",
+      "ownership": "corporation",
+      "country": "Germany",
+      "city": "Hamburg",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://spiegel.de/index.rss"
+      ]
+    },
+    {
+      "domain": "smh.com.au",
+      "name": "The Sydney Morning Herald",
+      "bias": "lean-left",
+      "factuality": "high",
+      "ownership": "corporation",
+      "country": "Australia",
+      "city": "Sydney",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://smh.com.au/rss/feed.xml"
+      ]
+    },
+    {
+      "domain": "theage.com.au",
+      "name": "The Age",
+      "bias": "lean-left",
+      "factuality": "high",
+      "ownership": "corporation",
+      "country": "Australia",
+      "city": "Melbourne",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://theage.com.au/rss/feed.xml"
+      ]
+    },
+    {
+      "domain": "thewire.in",
+      "name": "The Wire",
+      "bias": "lean-left",
+      "factuality": "high",
+      "ownership": "independent",
+      "country": "India",
+      "city": "New Delhi",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:thewire.in&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "scroll.in",
+      "name": "Scroll.in",
+      "bias": "lean-left",
+      "factuality": "high",
+      "ownership": "independent",
+      "country": "India",
+      "city": "New Delhi",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://feeds.feedburner.com/ScrollinArticles.rss"
+      ]
+    },
+    {
+      "domain": "elpais.com",
+      "name": "El Pais",
+      "bias": "lean-left",
+      "factuality": "high",
+      "ownership": "corporation",
+      "country": "Spain",
+      "city": "Madrid",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://elpais.com/arc/outboundfeeds/rss/?outputType=xml"
+      ]
+    },
+    {
+      "domain": "ajc.com",
+      "name": "The Atlanta Journal-Constitution",
+      "bias": "lean-left",
+      "factuality": "high",
+      "ownership": "individual",
+      "country": "United States",
+      "city": "Atlanta",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:ajc.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "lemonde.fr",
+      "name": "Le Monde",
+      "bias": "lean-left",
+      "factuality": "high",
+      "ownership": "independent",
+      "country": "France",
+      "city": "Paris",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://www.lemonde.fr/rss/une.xml"
+      ]
+    },
+    {
+      "domain": "inquirer.com",
+      "name": "The Philadelphia Inquirer",
+      "bias": "lean-left",
+      "factuality": "high",
+      "ownership": "independent",
+      "country": "United States",
+      "city": "Philadelphia",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://inquirer.com/arc/outboundfeeds/rss/?outputType=xml"
+      ]
+    },
+    {
+      "domain": "mercurynews.com",
+      "name": "The Mercury News",
+      "bias": "lean-left",
+      "factuality": "high",
+      "ownership": "private-equity",
+      "country": "United States",
+      "city": "San Jose",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:mercurynews.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "newstatesman.com",
+      "name": "New Statesman",
+      "bias": "left",
+      "factuality": "high",
+      "ownership": "individual",
+      "country": "United Kingdom",
+      "city": "London",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:newstatesman.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "freep.com",
+      "name": "Detroit Free Press",
+      "bias": "lean-left",
+      "factuality": "high",
+      "ownership": "media-conglomerate",
+      "country": "United States",
+      "city": "Detroit",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:freep.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "oregonlive.com",
+      "name": "The Oregonian",
+      "bias": "lean-left",
+      "factuality": "high",
+      "ownership": "media-conglomerate",
+      "country": "United States",
+      "city": "Portland",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://oregonlive.com/arc/outboundfeeds/rss/?outputType=xml"
+      ]
+    },
+    {
+      "domain": "nj.com",
+      "name": "NJ.com",
+      "bias": "lean-left",
+      "factuality": "high",
+      "ownership": "media-conglomerate",
+      "country": "United States",
+      "city": "Newark",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://nj.com/arc/outboundfeeds/rss/?outputType=xml"
+      ]
+    },
+    {
+      "domain": "stltoday.com",
+      "name": "St. Louis Post-Dispatch",
+      "bias": "lean-left",
+      "factuality": "high",
+      "ownership": "media-conglomerate",
+      "country": "United States",
+      "city": "St. Louis",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "http://www.stltoday.com/search/?f=rss&amp;t=article&amp;l=50&amp;s=start_time&amp;sd=desc&amp;k%5B%5D=%23topstory"
+      ]
+    },
+    {
+      "domain": "upi.com",
+      "name": "UPI",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "corporation",
+      "country": "United States",
+      "city": "Washington",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:upi.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "fortune.com",
+      "name": "Fortune",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "individual",
+      "country": "United States",
+      "city": "New York",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://fortune.com/feed/"
+      ]
+    },
+    {
+      "domain": "houstonchronicle.com",
+      "name": "Houston Chronicle",
+      "bias": "lean-left",
+      "factuality": "high",
+      "ownership": "corporation",
+      "country": "United States",
+      "city": "Houston",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:houstonchronicle.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "theweek.com",
+      "name": "The Week",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "corporation",
+      "country": "United States",
+      "city": "New York",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://theweek.com/rss"
+      ]
+    },
+    {
+      "domain": "baltimoresun.com",
+      "name": "The Baltimore Sun",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "individual",
+      "country": "United States",
+      "city": "Baltimore",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:baltimoresun.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "timesunion.com",
+      "name": "Times Union",
+      "bias": "lean-left",
+      "factuality": "high",
+      "ownership": "corporation",
+      "country": "United States",
+      "city": "Albany",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:timesunion.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "sun-sentinel.com",
+      "name": "South Florida Sun Sentinel",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "private-equity",
+      "country": "United States",
+      "city": "Fort Lauderdale",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:sun-sentinel.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "orlandosentinel.com",
+      "name": "Orlando Sentinel",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "private-equity",
+      "country": "United States",
+      "city": "Orlando",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:orlandosentinel.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "courant.com",
+      "name": "Hartford Courant",
+      "bias": "lean-left",
+      "factuality": "high",
+      "ownership": "private-equity",
+      "country": "United States",
+      "city": "Hartford",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:courant.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "nola.com",
+      "name": "NOLA.com",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "individual",
+      "country": "United States",
+      "city": "New Orleans",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:nola.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "newsday.com",
+      "name": "Newsday",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "individual",
+      "country": "United States",
+      "city": "Melville",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://www.newsday.com/api/rss/recent"
+      ]
+    },
+    {
+      "domain": "jsonline.com",
+      "name": "Milwaukee Journal Sentinel",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "media-conglomerate",
+      "country": "United States",
+      "city": "Milwaukee",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:jsonline.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "cincinnati.com",
+      "name": "The Cincinnati Enquirer",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "media-conglomerate",
+      "country": "United States",
+      "city": "Cincinnati",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:cincinnati.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "dispatch.com",
+      "name": "The Columbus Dispatch",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "media-conglomerate",
+      "country": "United States",
+      "city": "Columbus",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:dispatch.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "indystar.com",
+      "name": "The Indianapolis Star",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "media-conglomerate",
+      "country": "United States",
+      "city": "Indianapolis",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:indystar.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "buffalonews.com",
+      "name": "The Buffalo News",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "media-conglomerate",
+      "country": "United States",
+      "city": "Buffalo",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "http://buffalonews.com/search/?f=rss&amp;t=article&amp;l=50&amp;s=start_time&amp;sd=desc&amp;k%5B%5D=%23topstory"
+      ]
+    },
+    {
+      "domain": "tennessean.com",
+      "name": "The Tennessean",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "media-conglomerate",
+      "country": "United States",
+      "city": "Nashville",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:tennessean.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "desmoinesregister.com",
+      "name": "The Des Moines Register",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "media-conglomerate",
+      "country": "United States",
+      "city": "Des Moines",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:desmoinesregister.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "sandiegouniontribune.com",
+      "name": "The San Diego Union-Tribune",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "private-equity",
+      "country": "United States",
+      "city": "San Diego",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:sandiegouniontribune.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "pennlive.com",
+      "name": "PennLive",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "media-conglomerate",
+      "country": "United States",
+      "city": "Harrisburg",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://pennlive.com/arc/outboundfeeds/rss/?outputType=xml"
+      ]
+    },
+    {
+      "domain": "staradvertiser.com",
+      "name": "Honolulu Star-Advertiser",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "individual",
+      "country": "United States",
+      "city": "Honolulu",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://staradvertiser.com/feed/"
+      ]
+    },
+    {
+      "domain": "courier-journal.com",
+      "name": "The Courier-Journal",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "media-conglomerate",
+      "country": "United States",
+      "city": "Louisville",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:courier-journal.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "pressherald.com",
+      "name": "Portland Press Herald",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "independent",
+      "country": "United States",
+      "city": "Portland",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://pressherald.com/feed/"
+      ]
+    },
+    {
+      "domain": "spokesman.com",
+      "name": "The Spokesman-Review",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "individual",
+      "country": "United States",
+      "city": "Spokane",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:spokesman.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "statesman.com",
+      "name": "Austin American-Statesman",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "media-conglomerate",
+      "country": "United States",
+      "city": "Austin",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:statesman.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "sltrib.com",
+      "name": "The Salt Lake Tribune",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "independent",
+      "country": "United States",
+      "city": "Salt Lake City",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://sltrib.com/arc/outboundfeeds/rss/?outputType=xml"
+      ]
+    },
+    {
+      "domain": "expressnews.com",
+      "name": "San Antonio Express-News",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "corporation",
+      "country": "United States",
+      "city": "San Antonio",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:expressnews.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "billingsgazette.com",
+      "name": "Billings Gazette",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "media-conglomerate",
+      "country": "United States",
+      "city": "Billings",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "http://billingsgazette.com/search/?f=rss&amp;t=article&amp;l=50&amp;s=start_time&amp;sd=desc&amp;k%5B%5D=%23topstory"
+      ]
+    },
+    {
+      "domain": "omaha.com",
+      "name": "Omaha World-Herald",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "media-conglomerate",
+      "country": "United States",
+      "city": "Omaha",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "http://omaha.com/search/?f=rss&amp;t=article&amp;l=50&amp;s=start_time&amp;sd=desc&amp;k%5B%5D=%23topstory"
+      ]
+    },
+    {
+      "domain": "coloradosun.com",
+      "name": "The Colorado Sun",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "independent",
+      "country": "United States",
+      "city": "Denver",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://coloradosun.com/feed/"
+      ]
+    },
+    {
+      "domain": "adn.com",
+      "name": "Anchorage Daily News",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "individual",
+      "country": "United States",
+      "city": "Anchorage",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://adn.com/arc/outboundfeeds/rss/?outputType=xml"
+      ]
+    },
+    {
+      "domain": "providencejournal.com",
+      "name": "The Providence Journal",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "media-conglomerate",
+      "country": "United States",
+      "city": "Providence",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:providencejournal.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "delawareonline.com",
+      "name": "The News Journal",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "media-conglomerate",
+      "country": "United States",
+      "city": "Wilmington",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:delawareonline.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "postandcourier.com",
+      "name": "The Post and Courier",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "individual",
+      "country": "United States",
+      "city": "Charleston",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:postandcourier.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "masslive.com",
+      "name": "MassLive",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "media-conglomerate",
+      "country": "United States",
+      "city": "Springfield",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://masslive.com/arc/outboundfeeds/rss/?outputType=xml"
+      ]
+    },
+    {
+      "domain": "syracuse.com",
+      "name": "Syracuse.com",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "media-conglomerate",
+      "country": "United States",
+      "city": "Syracuse",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://syracuse.com/arc/outboundfeeds/rss/?outputType=xml"
+      ]
+    },
+    {
+      "domain": "clarionledger.com",
+      "name": "Clarion Ledger",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "media-conglomerate",
+      "country": "United States",
+      "city": "Jackson",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:clarionledger.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "tulsaworld.com",
+      "name": "Tulsa World",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "media-conglomerate",
+      "country": "United States",
+      "city": "Tulsa",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:tulsaworld.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "montrealgazette.com",
+      "name": "Montreal Gazette",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "corporation",
+      "country": "Canada",
+      "city": "Montreal",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:montrealgazette.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "theglobeandmail.com",
+      "name": "The Globe and Mail",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "individual",
+      "country": "Canada",
+      "city": "Toronto",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://theglobeandmail.com/arc/outboundfeeds/rss/?outputType=xml"
+      ]
+    },
+    {
+      "domain": "politico.eu",
+      "name": "Politico Europe",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "media-conglomerate",
+      "country": "Belgium",
+      "city": "Brussels",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://politico.eu/feed/"
+      ]
+    },
+    {
+      "domain": "kyivindependent.com",
+      "name": "The Kyiv Independent",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "independent",
+      "country": "Ukraine",
+      "city": "Kyiv",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://kyivindependent.com/news-archive/rss/"
+      ]
+    },
+    {
+      "domain": "balkaninsight.com",
+      "name": "Balkan Insight",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "independent",
+      "country": "Serbia",
+      "city": "Belgrade",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://balkaninsight.com/feed/"
+      ]
+    },
+    {
+      "domain": "dutchnews.nl",
+      "name": "DutchNews",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "independent",
+      "country": "Netherlands",
+      "city": "Amsterdam",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://dutchnews.nl/feed/"
+      ]
+    },
+    {
+      "domain": "cp24.com",
+      "name": "CP24",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "telecom",
+      "country": "Canada",
+      "city": "Toronto",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://cp24.com/arc/outboundfeeds/rss/?outputType=xml"
+      ]
+    },
+    {
+      "domain": "themoscowtimes.com",
+      "name": "The Moscow Times",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "independent",
+      "country": "Netherlands",
+      "city": "Amsterdam",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:themoscowtimes.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "thejournal.ie",
+      "name": "TheJournal.ie",
+      "bias": "center",
+      "factuality": "mixed",
+      "ownership": "independent",
+      "country": "Ireland",
+      "city": "Dublin",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://thejournal.ie/feed/"
+      ]
+    },
+    {
+      "domain": "asahi.com",
+      "name": "The Asahi Shimbun",
+      "bias": "lean-left",
+      "factuality": "high",
+      "ownership": "corporation",
+      "country": "Japan",
+      "city": "Tokyo",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:asahi.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "brusselstimes.com",
+      "name": "The Brussels Times",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "independent",
+      "country": "Belgium",
+      "city": "Brussels",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:brusselstimes.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "koreaherald.com",
+      "name": "The Korea Herald",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "corporation",
+      "country": "South Korea",
+      "city": "Seoul",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://www.koreaherald.com/rss/newsAll"
+      ]
+    },
+    {
+      "domain": "mainichi.jp",
+      "name": "The Mainichi",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "corporation",
+      "country": "Japan",
+      "city": "Tokyo",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:mainichi.jp&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "indianexpress.com",
+      "name": "The Indian Express",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "corporation",
+      "country": "India",
+      "city": "Noida",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://indianexpress.com/feed/"
+      ]
+    },
+    {
+      "domain": "ndtv.com",
+      "name": "NDTV",
+      "bias": "center",
+      "factuality": "mixed",
+      "ownership": "corporation",
+      "country": "India",
+      "city": "New Delhi",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:ndtv.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "koreatimes.co.kr",
+      "name": "The Korea Times",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "corporation",
+      "country": "South Korea",
+      "city": "Seoul",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://feed.koreatimes.co.kr/k/allnews.xml"
+      ]
+    },
+    {
+      "domain": "taipeitimes.com",
+      "name": "Taipei Times",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "corporation",
+      "country": "Taiwan",
+      "city": "Taipei",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:taipeitimes.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "dawn.com",
+      "name": "Dawn",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "corporation",
+      "country": "Pakistan",
+      "city": "Karachi",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:dawn.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "thedailystar.net",
+      "name": "The Daily Star",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "corporation",
+      "country": "Bangladesh",
+      "city": "Dhaka",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://thedailystar.net/rss.xml"
+      ]
+    },
+    {
+      "domain": "hindustantimes.com",
+      "name": "Hindustan Times",
+      "bias": "center",
+      "factuality": "mixed",
+      "ownership": "corporation",
+      "country": "India",
+      "city": "New Delhi",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:hindustantimes.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "rnz.co.nz",
+      "name": "RNZ",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "government",
+      "country": "New Zealand",
+      "city": "Wellington",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:rnz.co.nz&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "news24.com",
+      "name": "News24",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "corporation",
+      "country": "South Africa",
+      "city": "Cape Town",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:news24.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "swissinfo.ch",
+      "name": "SWI swissinfo.ch",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "government",
+      "country": "Switzerland",
+      "city": "Bern",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:swissinfo.ch&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "premiumtimesng.com",
+      "name": "Premium Times",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "independent",
+      "country": "Nigeria",
+      "city": "Abuja",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://premiumtimesng.com/feed/"
+      ]
+    },
+    {
+      "domain": "nation.africa",
+      "name": "Daily Nation",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "corporation",
+      "country": "Kenya",
+      "city": "Nairobi",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:nation.africa&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "arabnews.com",
+      "name": "Arab News",
+      "bias": "center",
+      "factuality": "mixed",
+      "ownership": "corporation",
+      "country": "Saudi Arabia",
+      "city": "Riyadh",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://arabnews.com/rss.xml"
+      ]
+    },
+    {
+      "domain": "africanews.com",
+      "name": "Africanews",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "corporation",
+      "country": "Congo",
+      "city": "Pointe-Noire",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://africanews.com/feed/"
+      ]
+    },
+    {
+      "domain": "mexiconewsdaily.com",
+      "name": "Mexico News Daily",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "independent",
+      "country": "Mexico",
+      "city": "Mexico City",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://mexiconewsdaily.com/feed/"
+      ]
+    },
+    {
+      "domain": "batimes.com.ar",
+      "name": "Buenos Aires Times",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "corporation",
+      "country": "Argentina",
+      "city": "Buenos Aires",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://batimes.com.ar/feed/"
+      ]
+    },
+    {
+      "domain": "sbs.com.au",
+      "name": "SBS News",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "government",
+      "country": "Australia",
+      "city": "Sydney",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://sbs.com.au/news/feed/"
+      ]
+    },
+    {
+      "domain": "thenationalnews.com",
+      "name": "The National",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "government",
+      "country": "United Arab Emirates",
+      "city": "Abu Dhabi",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://thenationalnews.com/arc/outboundfeeds/rss/?outputType=xml"
+      ]
+    },
+    {
+      "domain": "nzherald.co.nz",
+      "name": "The New Zealand Herald",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "corporation",
+      "country": "New Zealand",
+      "city": "Auckland",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:nzherald.co.nz&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "sacbee.com",
+      "name": "The Sacramento Bee",
+      "bias": "lean-left",
+      "factuality": "high",
+      "ownership": "corporation",
+      "country": "United States",
+      "city": "Sacramento",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:sacbee.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "kansascity.com",
+      "name": "The Kansas City Star",
+      "bias": "lean-left",
+      "factuality": "high",
+      "ownership": "corporation",
+      "country": "United States",
+      "city": "Kansas City",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:kansascity.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "charlotteobserver.com",
+      "name": "The Charlotte Observer",
+      "bias": "lean-left",
+      "factuality": "high",
+      "ownership": "corporation",
+      "country": "United States",
+      "city": "Charlotte",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:charlotteobserver.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "newsobserver.com",
+      "name": "The News & Observer",
+      "bias": "lean-left",
+      "factuality": "high",
+      "ownership": "corporation",
+      "country": "United States",
+      "city": "Raleigh",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:newsobserver.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
+    },
+    {
+      "domain": "idahostatesman.com",
+      "name": "Idaho Statesman",
+      "bias": "center",
+      "factuality": "high",
+      "ownership": "corporation",
+      "country": "United States",
+      "city": "Boise",
+      "ratingSources": [
+        "AllSides",
+        "MBFC"
+      ],
+      "feeds": [
+        "https://news.google.com/rss/search?q=when:24h+site:idahostatesman.com&hl=en-US&gl=US&ceid=US:en"
+      ],
+      "_note": "No usable native RSS; reached through a Google News headline index, so contributes headlines without images or blurbs."
     }
   ]
 }

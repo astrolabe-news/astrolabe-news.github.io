@@ -8,7 +8,7 @@ import { fileURLToPath } from 'node:url';
 import { fetchAll } from './steps/fetch.mjs';
 import { embedAll } from './steps/embed.mjs';
 import { cluster, loadState, serializeState, prune } from './steps/cluster.mjs';
-import { buildStory } from './steps/enrich.mjs';
+import { buildStory, applyBlindspots } from './steps/enrich.mjs';
 import { build } from './steps/build.mjs';
 import { summarizeAll } from './steps/summarize.mjs';
 
@@ -58,7 +58,9 @@ console.log(`  joined ${stats.joined} | new ${stats.created} | merged ${stats.me
 
 step(5, 'enriching');
 const stories = state.clusters.map((c) => buildStory(c, byDomain, taxonomy));
-console.log(`  ${stories.length} stories | ${stories.filter((s) => s.blindspot).length} blindspots`);
+const bl = applyBlindspots(stories);
+console.log(`  ${stories.length} stories | ${bl.eligible} eligible | ${stories.filter((s) => s.blindspot).length} blindspots`);
+console.log(`  corpus baseline: left ${bl.baseline.left}% · center ${bl.baseline.center}% · right ${bl.baseline.right}%`);
 
 step(6, 'summarizing');
 const summaries = await summarizeAll(stories, {
@@ -71,7 +73,7 @@ step(7, 'building site data');
 if (opts.dry) {
   console.log('  --dry: skipping writes');
 } else {
-  await build(stories, sources, taxonomy, opts.outDir);
+  await build(stories, sources, taxonomy, opts.outDir, { blindspot: bl });
   await mkdir(dirname(opts.statePath), { recursive: true });
   await writeFile(opts.statePath, JSON.stringify(serializeState(state)));
   await writeFile(opts.summaryPath, JSON.stringify(summaries));
