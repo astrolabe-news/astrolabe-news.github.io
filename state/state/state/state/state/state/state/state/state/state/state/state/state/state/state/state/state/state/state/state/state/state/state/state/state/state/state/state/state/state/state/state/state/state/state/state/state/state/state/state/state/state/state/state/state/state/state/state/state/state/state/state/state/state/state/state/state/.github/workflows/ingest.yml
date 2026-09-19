@@ -1,0 +1,95 @@
+name: Ingest and deploy
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'site/**'
+      - 'pipeline/**'
+      - '.github/workflows/ingest.yml'
+
+# Actions minutes are unlimited on public repositories, which is what makes the
+# half-hourly refresh free. On a private repo this would burn the 2,000-minute
+# allowance in about a fortnight.
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: ingest
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      # Cluster state carries story ids forward, so permalinks survive between runs.
+      # It lives on an orphan branch that is force-pushed with a single commit, which
+      # keeps the repository a couple of megabytes rather than growing without bound.
+      - name: Restore cluster state
+        run: |
+          mkdir -p state
+          if git ls-remote --exit-code --heads origin state >/dev/null 2>&1; then
+            git fetch --depth=1 origin state
+            git --work-tree=state checkout FETCH_HEAD -- . 2>/dev/null || true
+            echo "restored $(du -sh state | cut -f1) of state"
+          else
+            echo "no state branch yet; starting cold"
+          fi
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - run: npm ci
+
+      # The embedding model is ~90MB. Caching it keeps each run to a few seconds of setup.
+      - name: Cache embedding model
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: hf-all-MiniLM-L6-v2-v1
+
+      - name: Run pipeline
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node pipeline/run.mjs --budget 120
+
+      - name: Report
+        run: |
+          echo "### Fulcrum build" >> $GITHUB_STEP_SUMMARY
+          node -e "
+            const m = require('./site/data/meta.json');
+            const h = require('./site/data/home.json');
+            console.log('- **' + m.stories + '** stories from **' + m.articles + '** articles across **' + m.outlets + '** outlets');
+            console.log('- **' + m.blindspots + '** blindspots (' + h.blindspots.left.length + ' left, ' + h.blindspots.right.length + ' right)');
+          " >> $GITHUB_STEP_SUMMARY
+
+      - name: Persist cluster state
+        run: |
+          git config user.name  "fulcrum-bot"
+          git config user.email "fulcrum-bot@users.noreply.github.com"
+          # Orphan commit, force-pushed: history depth stays at one, so the repo never
+          # accumulates 48 state blobs a day.
+          git checkout --orphan state-tmp
+          git rm -rq --cached . || true
+          git add -f state
+          git commit -qm "state $(date -u +%FT%TZ)" || exit 0
+          git push -f origin state-tmp:state
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deploy
+        uses: actions/deploy-pages@v4
