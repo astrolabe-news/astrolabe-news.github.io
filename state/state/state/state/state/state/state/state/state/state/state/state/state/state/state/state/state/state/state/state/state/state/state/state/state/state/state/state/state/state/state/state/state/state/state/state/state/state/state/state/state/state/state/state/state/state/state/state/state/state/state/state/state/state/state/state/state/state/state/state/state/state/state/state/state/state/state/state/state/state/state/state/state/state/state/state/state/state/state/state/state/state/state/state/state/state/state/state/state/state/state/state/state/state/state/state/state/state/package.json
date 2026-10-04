@@ -1,0 +1,17 @@
+{
+  "name": "astrolabe",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Know who is covering a story, and who is not.",
+  "scripts": {
+    "ingest": "node pipeline/run.mjs",
+    "ingest:fast": "node pipeline/run.mjs --limit 40 --no-llm",
+    "eval": "node pipeline/eval.mjs",
+    "serve": "python3 -m http.server -d site 8080"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "^3.7.6",
+    "fast-xml-parser": "^5.2.5"
+  }
+}
