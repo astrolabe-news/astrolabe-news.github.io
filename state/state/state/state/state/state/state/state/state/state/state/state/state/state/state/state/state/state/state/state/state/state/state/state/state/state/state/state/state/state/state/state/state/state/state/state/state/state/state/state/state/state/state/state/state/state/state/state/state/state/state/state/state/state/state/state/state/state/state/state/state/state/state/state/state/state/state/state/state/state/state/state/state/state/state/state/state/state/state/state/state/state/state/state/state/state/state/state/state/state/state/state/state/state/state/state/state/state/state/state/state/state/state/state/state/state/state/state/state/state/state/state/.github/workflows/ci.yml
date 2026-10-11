@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+
+      - name: Validate registry
+        run: node pipeline/validate.mjs
+
+      # A short run over live feeds with no API key. Catches parser and pipeline
+      # breakage without spending any summary budget.
+      - name: Pipeline smoke test
+        run: node pipeline/run.mjs --limit 120 --no-llm
+
+      - name: Check output
+        run: |
+          test -f site/data/home.json
+          test -f site/data/index.json
+          node -e "
+            const m = require('./site/data/meta.json');
+            if (!m.stories) { console.error('no stories built'); process.exit(1); }
+            console.log('built', m.stories, 'stories from', m.outlets, 'outlets');
+          "
