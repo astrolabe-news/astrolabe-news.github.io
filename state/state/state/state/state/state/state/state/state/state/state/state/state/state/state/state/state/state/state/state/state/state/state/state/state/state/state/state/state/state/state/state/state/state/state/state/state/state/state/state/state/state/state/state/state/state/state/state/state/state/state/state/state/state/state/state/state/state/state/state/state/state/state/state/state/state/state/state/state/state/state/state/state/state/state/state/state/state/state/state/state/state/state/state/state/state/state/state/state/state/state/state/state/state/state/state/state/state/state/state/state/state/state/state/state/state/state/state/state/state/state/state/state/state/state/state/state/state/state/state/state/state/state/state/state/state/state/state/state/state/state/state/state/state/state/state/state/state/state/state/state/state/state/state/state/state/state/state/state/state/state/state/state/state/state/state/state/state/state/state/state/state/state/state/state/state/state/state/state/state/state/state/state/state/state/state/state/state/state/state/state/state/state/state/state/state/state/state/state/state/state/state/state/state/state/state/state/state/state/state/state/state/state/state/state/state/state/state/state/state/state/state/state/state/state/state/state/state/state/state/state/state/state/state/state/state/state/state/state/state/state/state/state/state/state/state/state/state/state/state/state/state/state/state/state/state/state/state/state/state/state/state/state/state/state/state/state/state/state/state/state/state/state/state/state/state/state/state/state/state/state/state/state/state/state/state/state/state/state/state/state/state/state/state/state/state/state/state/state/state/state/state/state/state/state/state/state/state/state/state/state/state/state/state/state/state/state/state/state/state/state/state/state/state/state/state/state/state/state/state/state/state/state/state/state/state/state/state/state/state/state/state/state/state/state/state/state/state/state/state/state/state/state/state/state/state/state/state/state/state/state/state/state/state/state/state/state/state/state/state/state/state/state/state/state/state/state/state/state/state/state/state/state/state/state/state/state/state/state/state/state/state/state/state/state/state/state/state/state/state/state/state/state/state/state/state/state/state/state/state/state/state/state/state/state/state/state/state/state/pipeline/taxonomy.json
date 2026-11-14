@@ -1,0 +1,801 @@
+{
+  "_note": "Topic rules are matched against a story's combined headlines. First match by weight wins; a story may carry up to three topics. Keep patterns specific - a bare 'trade' will swallow half the feed. The political flag marks topics that can qualify a story for the Umbra feed; a celebrity death covered unevenly is not a political coverage gap.",
+  "topics": [
+    {
+      "id": "us-politics",
+      "name": "US Politics",
+      "weight": 1,
+      "any": [
+        "white house",
+        "congress",
+        "senate",
+        "house of representatives",
+        "capitol hill",
+        "lawmaker",
+        "midterm",
+        "primary runoff",
+        "filibuster",
+        "impeach"
+      ],
+      "political": true
+    },
+    {
+      "id": "donald-trump",
+      "name": "Donald Trump",
+      "weight": 3,
+      "any": [
+        "trump"
+      ],
+      "political": true
+    },
+    {
+      "id": "republican-party",
+      "name": "Republican Party",
+      "weight": 2,
+      "any": [
+        "republican",
+        "gop ",
+        "gop's",
+        "conservative party"
+      ],
+      "political": true
+    },
+    {
+      "id": "democratic-party",
+      "name": "Democratic Party",
+      "weight": 2,
+      "any": [
+        "democrat",
+        "democratic party",
+        "progressive caucus"
+      ],
+      "political": true
+    },
+    {
+      "id": "supreme-court",
+      "name": "Supreme Court",
+      "weight": 3,
+      "any": [
+        "supreme court",
+        "scotus",
+        "justice roberts",
+        "justice barrett",
+        "justice thomas"
+      ],
+      "political": true
+    },
+    {
+      "id": "elections",
+      "name": "Elections",
+      "weight": 2,
+      "any": [
+        "election",
+        "ballot",
+        "voter",
+        "polling place",
+        "mail-in voting",
+        "primary",
+        "runoff"
+      ],
+      "political": true
+    },
+    {
+      "id": "tariffs",
+      "name": "Tariffs",
+      "weight": 3,
+      "any": [
+        "tariff",
+        "counter-tariff",
+        "customs duties",
+        "trade war",
+        "retaliatory duties"
+      ],
+      "political": true
+    },
+    {
+      "id": "us-economy",
+      "name": "US Economy",
+      "weight": 1,
+      "any": [
+        "inflation",
+        "federal reserve",
+        "interest rate",
+        "recession",
+        "jobs report",
+        "unemployment",
+        "consumer price"
+      ],
+      "political": true
+    },
+    {
+      "id": "business",
+      "name": "Business & Markets",
+      "weight": 1,
+      "any": [
+        "stock market",
+        "earnings",
+        "nasdaq",
+        "s&p 500",
+        "dow jones",
+        " ipo ",
+        "merger",
+        "acquisition",
+        "bankruptcy"
+      ],
+      "political": false
+    },
+    {
+      "id": "ai",
+      "name": "Artificial Intelligence",
+      "weight": 3,
+      "any": [
+        "artificial intelligence",
+        "openai",
+        "chatgpt",
+        "anthropic",
+        "large language model",
+        " ai ",
+        "ai-generated"
+      ],
+      "political": false
+    },
+    {
+      "id": "technology",
+      "name": "Technology",
+      "weight": 1,
+      "any": [
+        "silicon valley",
+        "software",
+        "semiconductor",
+        "smartphone",
+        "cybersecurity",
+        "data breach",
+        "chipmaker"
+      ],
+      "political": false
+    },
+    {
+      "id": "social-media",
+      "name": "Social Media",
+      "weight": 2,
+      "any": [
+        "facebook",
+        "instagram",
+        "tiktok",
+        "twitter",
+        " x.com",
+        "youtube",
+        "reddit",
+        "meta platforms"
+      ],
+      "political": false
+    },
+    {
+      "id": "cryptocurrency",
+      "name": "Cryptocurrency",
+      "weight": 3,
+      "any": [
+        "bitcoin",
+        "cryptocurrency",
+        "ethereum",
+        "crypto exchange",
+        "stablecoin"
+      ],
+      "political": false
+    },
+    {
+      "id": "immigration",
+      "name": "US Immigration",
+      "weight": 3,
+      "any": [
+        "immigration",
+        "immigrant",
+        "deportation",
+        "asylum seeker",
+        "border patrol",
+        "ice agents",
+        "customs and border"
+      ],
+      "political": true
+    },
+    {
+      "id": "israel-gaza",
+      "name": "Israel-Gaza",
+      "weight": 3,
+      "any": [
+        "gaza",
+        "israeli",
+        "israel",
+        "hamas",
+        "west bank",
+        " idf ",
+        "netanyahu"
+      ],
+      "political": true
+    },
+    {
+      "id": "ukraine-russia",
+      "name": "Ukraine-Russia War",
+      "weight": 3,
+      "any": [
+        "ukraine",
+        "ukrainian",
+        "zelensky",
+        "kyiv",
+        "moscow",
+        "kremlin",
+        "putin"
+      ],
+      "political": true
+    },
+    {
+      "id": "iran",
+      "name": "Iran",
+      "weight": 3,
+      "any": [
+        "iran",
+        "iranian",
+        "tehran",
+        "revolutionary guard"
+      ],
+      "political": true
+    },
+    {
+      "id": "china",
+      "name": "China",
+      "weight": 2,
+      "any": [
+        "china",
+        "chinese",
+        "beijing",
+        "xi jinping",
+        "taiwan"
+      ],
+      "political": true
+    },
+    {
+      "id": "middle-east",
+      "name": "Middle East",
+      "weight": 1,
+      "any": [
+        "syria",
+        "lebanon",
+        "yemen",
+        "saudi arabia",
+        "qatar",
+        "iraq",
+        "houthi"
+      ],
+      "political": true
+    },
+    {
+      "id": "canada",
+      "name": "Canadian Politics",
+      "weight": 2,
+      "any": [
+        "canada",
+        "canadian",
+        "ottawa",
+        "carney",
+        "ontario premier",
+        "trudeau"
+      ],
+      "political": true
+    },
+    {
+      "id": "uk",
+      "name": "UK Politics",
+      "weight": 2,
+      "any": [
+        "downing street",
+        "westminster",
+        "starmer",
+        "parliament",
+        "british government"
+      ],
+      "political": true
+    },
+    {
+      "id": "europe",
+      "name": "Europe",
+      "weight": 1,
+      "any": [
+        "european union",
+        "brussels",
+        "nato",
+        "germany",
+        "france",
+        "poland"
+      ],
+      "political": true
+    },
+    {
+      "id": "india",
+      "name": "India",
+      "weight": 2,
+      "any": [
+        "india",
+        "indian",
+        "new delhi",
+        "modi"
+      ],
+      "political": true
+    },
+    {
+      "id": "health",
+      "name": "Health",
+      "weight": 1,
+      "any": [
+        "measles",
+        "outbreak",
+        "vaccine",
+        "hospital",
+        " cdc ",
+        "public health",
+        "cancer",
+        "disease"
+      ],
+      "political": true
+    },
+    {
+      "id": "climate",
+      "name": "Climate",
+      "weight": 2,
+      "any": [
+        "climate change",
+        "global warming",
+        "emissions",
+        "carbon",
+        "renewable energy"
+      ],
+      "political": true
+    },
+    {
+      "id": "natural-disasters",
+      "name": "Natural Disasters",
+      "weight": 2,
+      "any": [
+        "hurricane",
+        "wildfire",
+        "earthquake",
+        "flooding",
+        "tornado",
+        "typhoon"
+      ],
+      "political": false
+    },
+    {
+      "id": "crime",
+      "name": "Crime",
+      "weight": 1,
+      "any": [
+        "arrested",
+        "charged with",
+        "homicide",
+        "shooting",
+        "indicted",
+        "sentenced",
+        "police say",
+        "manhunt"
+      ],
+      "political": false
+    },
+    {
+      "id": "justice",
+      "name": "Courts & Justice",
+      "weight": 1,
+      "any": [
+        "federal judge",
+        "lawsuit",
+        "appeals court",
+        "prosecutor",
+        "attorney general",
+        "verdict",
+        "settlement"
+      ],
+      "political": true
+    },
+    {
+      "id": "guns",
+      "name": "Gun Policy",
+      "weight": 3,
+      "any": [
+        "gun control",
+        "firearm",
+        "second amendment",
+        "mass shooting",
+        "assault weapon"
+      ],
+      "political": true
+    },
+    {
+      "id": "abortion",
+      "name": "Abortion",
+      "weight": 3,
+      "any": [
+        "abortion",
+        "roe v. wade",
+        "reproductive rights"
+      ],
+      "political": true
+    },
+    {
+      "id": "education",
+      "name": "Education",
+      "weight": 2,
+      "any": [
+        "school district",
+        "university",
+        "student loan",
+        "curriculum",
+        "teachers union",
+        "campus"
+      ],
+      "political": true
+    },
+    {
+      "id": "dei",
+      "name": "DEI",
+      "weight": 3,
+      "any": [
+        "diversity, equity",
+        "dei ",
+        "affirmative action"
+      ],
+      "political": true
+    },
+    {
+      "id": "energy",
+      "name": "Energy",
+      "weight": 2,
+      "any": [
+        "oil price",
+        "opec",
+        "pipeline",
+        "natural gas",
+        "nuclear plant",
+        "crude"
+      ],
+      "political": true
+    },
+    {
+      "id": "military",
+      "name": "Military & Defense",
+      "weight": 2,
+      "any": [
+        "pentagon",
+        "airstrike",
+        "military strike",
+        "troops",
+        "defense department",
+        "navy",
+        "warship"
+      ],
+      "political": true
+    },
+    {
+      "id": "intelligence",
+      "name": "Intelligence",
+      "weight": 3,
+      "any": [
+        " cia ",
+        " fbi ",
+        "espionage",
+        "spy chief",
+        "surveillance",
+        "nsa "
+      ],
+      "political": true
+    },
+    {
+      "id": "sports",
+      "name": "Sports",
+      "weight": 2,
+      "any": [
+        " nfl ",
+        " nba ",
+        "premier league",
+        "world cup",
+        "olympics",
+        " mlb ",
+        "super bowl"
+      ],
+      "political": false
+    },
+    {
+      "id": "entertainment",
+      "name": "Entertainment",
+      "weight": 1,
+      "any": [
+        "box office",
+        "grammy",
+        "oscar",
+        "netflix",
+        "hollywood",
+        "album",
+        "film festival"
+      ],
+      "political": false
+    },
+    {
+      "id": "media",
+      "name": "Media",
+      "weight": 2,
+      "any": [
+        "news network",
+        "journalist",
+        "press freedom",
+        "newspaper",
+        "broadcaster"
+      ],
+      "political": true
+    },
+    {
+      "id": "religion",
+      "name": "Religion",
+      "weight": 2,
+      "any": [
+        "vatican",
+        "the pope",
+        "church",
+        "evangelical",
+        "islam",
+        "synagogue"
+      ],
+      "political": true
+    },
+    {
+      "id": "space",
+      "name": "Space",
+      "weight": 3,
+      "any": [
+        "nasa",
+        "spacex",
+        "astronaut",
+        "satellite launch",
+        "mars mission"
+      ],
+      "political": false
+    },
+    {
+      "id": "obituaries",
+      "name": "Obituaries",
+      "weight": 3,
+      "political": false,
+      "any": [
+        "dies at",
+        "dies aged",
+        "has died",
+        "passed away",
+        "death at",
+        "obituary",
+        "mourns",
+        "remembered",
+        "tributes pour",
+        "cause of death"
+      ]
+    },
+    {
+      "id": "music",
+      "name": "Music",
+      "weight": 2,
+      "political": false,
+      "any": [
+        "singer",
+        "songwriter",
+        "country music",
+        "album",
+        "grammy",
+        "concert tour",
+        "band",
+        "pop star",
+        "music legend",
+        "musician"
+      ]
+    },
+    {
+      "id": "royals",
+      "name": "Royals",
+      "weight": 3,
+      "political": false,
+      "any": [
+        "king charles",
+        "prince william",
+        "princess",
+        "buckingham palace",
+        "royal family",
+        "duchess",
+        "prince harry"
+      ]
+    },
+    {
+      "id": "weather",
+      "name": "Weather",
+      "weight": 2,
+      "political": false,
+      "any": [
+        "storm",
+        "snowfall",
+        "heatwave",
+        "forecast",
+        "blizzard",
+        "cold snap",
+        "record heat"
+      ]
+    },
+    {
+      "id": "transport",
+      "name": "Transport",
+      "weight": 2,
+      "political": false,
+      "any": [
+        "airline",
+        "flight canceled",
+        "flight cancelled",
+        "railway",
+        "derailment",
+        "plane crash",
+        "boeing",
+        "airport"
+      ]
+    },
+    {
+      "id": "food",
+      "name": "Food & Agriculture",
+      "weight": 2,
+      "political": false,
+      "any": [
+        "farmers",
+        "crop",
+        "recall of",
+        "food safety",
+        "grocery prices",
+        "livestock",
+        "dairy"
+      ]
+    },
+    {
+      "id": "housing",
+      "name": "Housing",
+      "weight": 2,
+      "political": false,
+      "any": [
+        "housing market",
+        "home prices",
+        "rent",
+        "eviction",
+        "mortgage applications",
+        "homelessness"
+      ]
+    },
+    {
+      "id": "labor",
+      "name": "Labor",
+      "weight": 2,
+      "political": true,
+      "any": [
+        "union",
+        "strike",
+        "walkout",
+        "layoffs",
+        "collective bargaining",
+        "minimum wage"
+      ]
+    }
+  ],
+  "places": {
+    "_note": "US states plus notable cities, matched against headlines to locate a story. Source city is used as a fallback signal.",
+    "states": [
+      "Alabama",
+      "Alaska",
+      "Arizona",
+      "Arkansas",
+      "California",
+      "Colorado",
+      "Connecticut",
+      "Delaware",
+      "Florida",
+      "Georgia",
+      "Hawaii",
+      "Idaho",
+      "Illinois",
+      "Indiana",
+      "Iowa",
+      "Kansas",
+      "Kentucky",
+      "Louisiana",
+      "Maine",
+      "Maryland",
+      "Massachusetts",
+      "Michigan",
+      "Minnesota",
+      "Mississippi",
+      "Missouri",
+      "Montana",
+      "Nebraska",
+      "Nevada",
+      "New Hampshire",
+      "New Jersey",
+      "New Mexico",
+      "New York",
+      "North Carolina",
+      "North Dakota",
+      "Ohio",
+      "Oklahoma",
+      "Oregon",
+      "Pennsylvania",
+      "Rhode Island",
+      "South Carolina",
+      "South Dakota",
+      "Tennessee",
+      "Texas",
+      "Utah",
+      "Vermont",
+      "Virginia",
+      "Washington",
+      "West Virginia",
+      "Wisconsin",
+      "Wyoming"
+    ],
+    "cities": [
+      "Atlanta",
+      "Austin",
+      "Baltimore",
+      "Boston",
+      "Charlotte",
+      "Chicago",
+      "Cleveland",
+      "Columbus",
+      "Dallas",
+      "Denver",
+      "Detroit",
+      "Houston",
+      "Indianapolis",
+      "Kansas City",
+      "Las Vegas",
+      "Los Angeles",
+      "Memphis",
+      "Miami",
+      "Milwaukee",
+      "Minneapolis",
+      "Nashville",
+      "New Orleans",
+      "Oakland",
+      "Oklahoma City",
+      "Philadelphia",
+      "Phoenix",
+      "Pittsburgh",
+      "Portland",
+      "Sacramento",
+      "Salt Lake City",
+      "San Antonio",
+      "San Diego",
+      "San Francisco",
+      "Seattle",
+      "St. Louis",
+      "Tampa",
+      "Toronto",
+      "Vancouver",
+      "Montreal",
+      "Calgary",
+      "Ottawa",
+      "London",
+      "Paris",
+      "Berlin",
+      "Moscow",
+      "Kyiv",
+      "Beijing",
+      "Tokyo",
+      "Delhi",
+      "Mumbai",
+      "Sydney",
+      "Melbourne",
+      "Jerusalem",
+      "Tel Aviv",
+      "Gaza",
+      "Tehran",
+      "Singapore",
+      "Hong Kong"
+    ]
+  }
+}
